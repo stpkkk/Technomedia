@@ -1,12 +1,12 @@
 import React from "react";
-import burger from "../assets/img/burger.svg"
-import "../styles/burger.scss";
+import burger from "../assets/img/burger.svg";
+import { BurgerContainer } from "../styles/BurgerContainer.style";
 
 const Burger = () => {
   return (
-    <div className="burger-container">
+    <BurgerContainer>
       <img src={burger} alt="burger" />
-    </div>
+    </BurgerContainer>
   );
 };
 

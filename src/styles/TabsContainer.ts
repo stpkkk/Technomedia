@@ -1,9 +1,10 @@
-.tabs-container {
+import styled from "styled-components";
+
+export const TabsContainer = styled.div`
   position: fixed;
   bottom: 0;
   width: 100%;
   max-width: 1440px;
-  margin: 0 auto;
 
   ul {
     display: flex;
@@ -32,5 +33,4 @@
       margin-right: 0;
     }
   }
-}
-// height: 863px;
+`;

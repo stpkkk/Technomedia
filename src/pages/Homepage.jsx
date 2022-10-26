@@ -1,14 +1,14 @@
-import React from "react";
 import HomepageBody from "../components/HomepageBody";
 import Tabs from "../components/Tabs";
-import "../styles/homepage.scss";
+
+import { HomepageContainer } from "../styles/HomepageContainer.style";
 
 const Homepage = () => {
   return (
-    <div className="homepage-container">
+    <HomepageContainer>
       <HomepageBody />
       <Tabs />
-    </div>
+    </HomepageContainer>
   );
 };
 

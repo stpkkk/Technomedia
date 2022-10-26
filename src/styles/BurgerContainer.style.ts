@@ -1,11 +1,13 @@
-.burger-container {
+import styled from "styled-components";
+
+export const BurgerContainer = styled.div`
   box-sizing: border-box;
   min-height: 64px;
   border-bottom: 1px solid #b5b5b5;
   display: flex;
   justify-content: center;
-  width: 100%;
+  cursor: pointer;
   img {
     max-width: 37.5px;
   }
-}
+`;

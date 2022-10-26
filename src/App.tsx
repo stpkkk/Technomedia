@@ -1,14 +1,28 @@
 import React from "react";
-import "./styles/index.scss";
-import Homepage from "./pages/Homepage";
+import { Route, Routes } from "react-router-dom";
+//components
 import Burger from "./components/Burger";
+import Homepage from "./pages/Homepage";
+import Articles from "./pages/Articles";
+import Courses from "./pages/Courses";
+import Media from "./pages/Media";
+//styles
+import { Container } from "./styles/Container.style";
+import { GlobalStyles } from "./styles/GlobalStyles.style";
+
 function App() {
   return (
     <>
       <Burger />
-      <div className="wrapper">
-        <Homepage />
-      </div>
+      <Container>
+        <GlobalStyles />
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/articles/:id" element={<Articles />} />
+          <Route path="/courses/:id" element={<Courses />} />
+          <Route path="/media/:id" element={<Media />} />
+        </Routes>
+      </Container>
     </>
   );
 }

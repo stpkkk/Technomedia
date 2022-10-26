@@ -1,11 +1,12 @@
 import React from "react";
-import "../styles/homepageBody.scss";
+
+import { HomepageBodyContainer } from "../styles/HomepageBodyContainer.style";
 
 const HomepageBody = () => {
   return (
-    <div className="homepage-body-container">
+    <HomepageBodyContainer>
       <div className="about-site">
-        <p >
+        <p>
           Лучше — сайт, который поможет приобрести <br /> и не бросить полезные
           привычки.
           <br /> Бесплатные видеотренировки, аудиомедитации, программы и статьи
@@ -13,7 +14,7 @@ const HomepageBody = () => {
         </p>
       </div>
       <div className="about-courses">
-        <p >
+        <p>
           Наши эксперты подготовили 16 курсов
           <br /> и более 70 статей в 6 категориях:
           <br />
@@ -23,7 +24,7 @@ const HomepageBody = () => {
           Занимайтесь в комфортном темпе.
         </p>
       </div>
-    </div>
+    </HomepageBodyContainer>
   );
 };
 
