@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
+
 //components
 import Burger from "./components/Burger";
 import Homepage from "./pages/Homepage";
@@ -7,17 +8,21 @@ import Articles from "./pages/Articles";
 import Courses from "./pages/Courses";
 import Media from "./pages/Media";
 //styles
-import { Container } from "./styles/Container.style";
+import { Container } from "./styles/GlobalContainer.style";
 import { GlobalStyles } from "./styles/GlobalStyles.style";
 
 function App() {
+
   return (
     <>
-      <Burger />
+      <GlobalStyles />
+      <Burger  />
       <Container>
-        <GlobalStyles />
         <Routes>
-          <Route path="/" element={<Homepage />} />
+          <Route
+            path="/"
+            element={<Homepage />}
+          />
           <Route path="/articles/:id" element={<Articles />} />
           <Route path="/courses/:id" element={<Courses />} />
           <Route path="/media/:id" element={<Media />} />

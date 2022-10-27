@@ -1,19 +1,21 @@
 import React from "react";
+import { About } from "../styles/Homepage/HomepageBody/About.style";
 
-import { HomepageBodyContainer } from "../styles/HomepageBodyContainer.style";
+import { HomepageBodyContainer } from "../styles/Homepage/HomepageBody/HomepageBodyContainer.style";
+import { Description } from "../styles/Homepage/HomepageBody/Description.style";
 
 const HomepageBody = () => {
   return (
     <HomepageBodyContainer>
-      <div className="about-site">
+      <About>
         <p>
           Лучше — сайт, который поможет приобрести <br /> и не бросить полезные
           привычки.
           <br /> Бесплатные видеотренировки, аудиомедитации, программы и статьи
           для нормализации сна, питания и развития осознанности.
         </p>
-      </div>
-      <div className="about-courses">
+      </About>
+      <Description>
         <p>
           Наши эксперты подготовили 16 курсов
           <br /> и более 70 статей в 6 категориях:
@@ -23,7 +25,7 @@ const HomepageBody = () => {
           <br />
           Занимайтесь в комфортном темпе.
         </p>
-      </div>
+      </Description>
     </HomepageBodyContainer>
   );
 };

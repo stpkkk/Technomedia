@@ -1,4 +1,4 @@
-const TabSvg = ({ fill }) => {
+const CardsSvg = ({ fill }) => {
   return (
     <div>
       <svg
@@ -14,4 +14,4 @@ const TabSvg = ({ fill }) => {
   );
 };
 
-export default TabSvg;
+export default CardsSvg;

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const TabsContainer = styled.div`
+export const CardsContainer = styled.div`
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -18,15 +18,6 @@ export const TabsContainer = styled.div`
       margin-right: 16px;
       cursor: pointer;
       padding: 19px 10px;
-
-      div {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-size: 11px;
-        line-height: 135%;
-        /* identical to box height, or 15px */
-      }
     }
 
     li:last-child {

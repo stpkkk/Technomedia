@@ -1,13 +1,13 @@
 import HomepageBody from "../components/HomepageBody";
-import Tabs from "../components/Tabs";
+import Cards from "../components/cards/Cards";
 
-import { HomepageContainer } from "../styles/HomepageContainer.style";
+import { HomepageContainer } from "../styles/Homepage/HomepageContainer.style";
 
 const Homepage = () => {
   return (
     <HomepageContainer>
       <HomepageBody />
-      <Tabs />
+      <Cards />
     </HomepageContainer>
   );
 };
