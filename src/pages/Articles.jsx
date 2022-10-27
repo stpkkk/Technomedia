@@ -1,9 +1,19 @@
-import React from 'react'
+import React from "react";
+import Homepage from "./Homepage";
+
+import { Link } from "react-router-dom";
+import { SplitPage, SplitPageLeft } from "../styles/Elements/SplitPage.style";
 
 const Articles = () => {
   return (
-	<div>Articles</div>
-  )
-}
+    <SplitPage>
+      <Link to="/">
+        <Homepage />
+      </Link>
+      <SplitPageLeft></SplitPageLeft>
+    </SplitPage>
+  );
+};
 
-export default Articles
+export default Articles;
+

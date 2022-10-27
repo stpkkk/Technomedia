@@ -21,7 +21,7 @@ const CardsHeader = ({ item,  handleClick }) => {
       <CardsHeaderStyles onClick={() => {
           handleClick(item);
         }}>
-        <span>{item.title}</span>
+        <span>{item.name}</span>
         <CardSvg fill={item.svgColor} />
       </CardsHeaderStyles>
     </div>

@@ -1,9 +1,17 @@
-import React from 'react'
+import React from "react";
+import { SplitPage, SplitPageLeft } from "./../styles/Elements/SplitPage.style";
+import { Link } from "react-router-dom";
+import Homepage from "./Homepage";
 
 const Courses = () => {
   return (
-	<div>Courses</div>
-  )
-}
+    <SplitPage>
+      <Link to="/">
+        <Homepage />
+      </Link>
+      <SplitPageLeft></SplitPageLeft>
+    </SplitPage>
+  );
+};
 
-export default Courses
+export default Courses;

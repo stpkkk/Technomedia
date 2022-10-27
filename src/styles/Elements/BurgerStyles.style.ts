@@ -6,7 +6,7 @@ export const BurgerStyles = styled.div`
   border-bottom: 1px solid #b5b5b5;
   display: flex;
   justify-content: center;
-  cursor: grab;
+  cursor: pointer;
   img {
     max-width: 37.5px;
   }

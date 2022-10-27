@@ -1,9 +1,17 @@
-import React from 'react'
+import React from "react";
+import { SplitPage, SplitPageLeft } from "./../styles/Elements/SplitPage.style";
+import Homepage from "./Homepage";
+import { Link } from "react-router-dom";
 
 const Media = () => {
   return (
-	<div>Media</div>
-  )
-}
+    <SplitPage>
+      <Link to="/">
+        <Homepage />
+      </Link>
+      <SplitPageLeft></SplitPageLeft>
+    </SplitPage>
+  );
+};
 
-export default Media
+export default Media;

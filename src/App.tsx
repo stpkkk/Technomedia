@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Route, Routes } from "react-router-dom";
 
 //components
@@ -12,20 +12,16 @@ import { Container } from "./styles/GlobalContainer.style";
 import { GlobalStyles } from "./styles/GlobalStyles.style";
 
 function App() {
-
   return (
     <>
       <GlobalStyles />
-      <Burger  />
+      <Burger />
       <Container>
         <Routes>
-          <Route
-            path="/"
-            element={<Homepage />}
-          />
-          <Route path="/articles/:id" element={<Articles />} />
-          <Route path="/courses/:id" element={<Courses />} />
-          <Route path="/media/:id" element={<Media />} />
+          <Route path="/" element={<Homepage />} />
+          <Route path="/articles" element={<Articles />} />
+          <Route path="/courses" element={<Courses />} />
+          <Route path="/media" element={<Media />} />
         </Routes>
       </Container>
     </>
