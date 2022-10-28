@@ -9,7 +9,7 @@ import {
   SplitPageRight,
 } from "../styles/elements/SplitPage.style";
 
-const Media = () => {
+const Course = () => {
   return (
     <SplitPage>
       <Link to="/">
@@ -17,17 +17,29 @@ const Media = () => {
       </Link>
       <Homepage />
       {data.map((item) => {
-        if (item.id === 2) {
+        if (item.id === 1) {
           return (
             <SplitPageLeft key={item.id}>
               <h2>{item.page.title}</h2>
-              <p>{item.page.text}</p>
               <div>
-                {/* <img
+                <img
                   src={require("../assets/img/" + item.page.image + ".png")}
                   alt={item.page.title}
-                /> */}
+                />
               </div>
+              <div>{item.page.text}</div>
+              <div>
+                <div>
+                  <p>"#Tag" {item.page.tag}</p>
+                </div>
+                <div>
+                  <p>
+                    Статья подготовлена при поддержке
+                    <a href="https://www.theabyss.com">{item.page.support}</a>
+                  </p>
+                </div>
+              </div>
+              <div></div>
             </SplitPageLeft>
           );
         }
@@ -37,4 +49,4 @@ const Media = () => {
   );
 };
 
-export default Media;
+export default Course;

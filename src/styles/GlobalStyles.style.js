@@ -1,3 +1,4 @@
+import styled from "styled-components";
 import { createGlobalStyle } from "styled-components";
 import SuisseIntlRegular from "../assets/fonts/SuisseIntl/SuisseIntlRegular.otf";
 
@@ -39,4 +40,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+`;
+
+export const Container = styled.div`
+  max-width: 1440px;
+  margin: 0 auto;
 `;

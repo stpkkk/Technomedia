@@ -4,7 +4,6 @@ export const CardsBodyStyles = styled.div`
   /* background: url(${(props) => props.backgroundImg}), no-repeat, center; */
   position: relative;
   bottom: 0%;
-  height: 654px;
 
   img {
     object-fit: cover;

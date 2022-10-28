@@ -1,53 +1,44 @@
 import { React, useState } from "react";
-import { cardsData } from "../../data/cardsData";
-//components
-import CardsBody from "./CardsBody";
-import CardsHeader from "./CardsHeader";
+import { data } from "../../data/data";
 
-//styles
-import { CardsContainer } from "../../styles/Homepage/cards/CardsContainer.style";
+import { CardsContainer } from "../../styles/homepage/cards/CardsContainer.style";
+import Card from "./Card";
 
 const Cards = () => {
-  // =====
-  //   const cardsHiddenState = cardsData.map((card) => ({
-  //     hidden: false,
-  //     id: card.id,
-  //   }));
-  //   const [cardsHidden, setCardsHidden] = useState(cardsHiddenState);//amos
+  const initialHiddenCardsState = data.map((item) => {
+    return {
+      id: item.id,
+      hidden: true,
+    };
+  });
+  const [hiddenCardsState, setHiddenCardsState] = useState(
+    initialHiddenCardsState
+  );
 
-  const [cardOpen, setCardOpen] = useState(false);
+  const handleClick = (id) => {
+    setHiddenCardsState(
+      hiddenCardsState.map((item) => {
+        if (item.id === id) {
+          item.hidden = !item.hidden;
+        } else {
+          item.hidden = true;
+        }
+        return item;
+      })
+    );
+  };
 
   return (
     <CardsContainer>
       <ul>
-        {cardsData.map((item) => {
-          // =====
-          //   const handleClick = (item) => {
-          //     setCardsHidden(
-          //       cardsHidden.reduce((acc, card) => {
-          //         // console.log("item:", item)
-          //         // console.log("card:", card)
-          //         if (card.id === item.id) {
-          //           card.hidden = !card.hidden;
-          //         }
-          //         return acc;
-          //       }, cardsHidden)
-          //     );
-          //   }; amos
-
-          const handleClick = () => {
-            setCardOpen((prev) => !prev);
-          };
-
+        {data.map((item, index) => {
           return (
-            <li key={item.id}>
-              <CardsHeader item={item} handleClick={handleClick} />
-              {/* ===== 
-               {!cardsHidden.includes(item.id).hidden && (
-                <CardsBody item={item} />
-              )} amos */}
-              {!cardOpen && <CardsBody item={item} />}
-            </li>
+            <Card
+              key={index}
+              isHidden={hiddenCardsState[index].hidden}
+              item={item}
+              handleClick={handleClick}
+            />
           );
         })}
       </ul>

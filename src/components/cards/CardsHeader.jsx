@@ -1,26 +1,15 @@
 import React from "react";
-import { CardsHeaderStyles } from "./../../styles/Homepage/cards/CardsHeader.style";
+import { CardsHeaderStyles } from "../../styles/homepage/cards/CardsHeader.style";
 import CardSvg from "./CardsSvg";
 
-const CardsHeader = ({ item,  handleClick }) => {
-  //   const testClick = (event) => {
-  //     setShowCard(true);
-
-  //     console.log(item);
-  //   };
-
+const CardsHeader = ({ item, handleClick }) => {
   return (
     <div>
-      {/* <CardsHeaderStyles testClick={() => testClick(item)}> */}
-      {/* <CardsHeaderStyles
+      <CardsHeaderStyles
         onClick={() => {
-          handleClick(item);
-          setShowCard((prev) => !prev);
+          handleClick(item.id);
         }}
-      > */}
-      <CardsHeaderStyles onClick={() => {
-          handleClick(item);
-        }}>
+      >
         <span>{item.name}</span>
         <CardSvg fill={item.svgColor} />
       </CardsHeaderStyles>

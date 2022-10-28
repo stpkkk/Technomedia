@@ -1,12 +1,12 @@
-import React from "react";
-import { About } from "../styles/Homepage/HomepageBody/About.style";
-
-import { HomepageBodyContainer } from "../styles/Homepage/HomepageBody/HomepageBodyContainer.style";
-import { Description } from "../styles/Homepage/HomepageBody/Description.style";
+import {
+  HomepageBodyStyles,
+  Description,
+  About,
+} from "../styles/homepage/HomepageBodyStyles.style";
 
 const HomepageBody = () => {
   return (
-    <HomepageBodyContainer>
+    <HomepageBodyStyles>
       <About>
         <p>
           Лучше — сайт, который поможет приобрести <br /> и не бросить полезные
@@ -26,7 +26,7 @@ const HomepageBody = () => {
           Занимайтесь в комфортном темпе.
         </p>
       </Description>
-    </HomepageBodyContainer>
+    </HomepageBodyStyles>
   );
 };
 

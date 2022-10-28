@@ -1,12 +1,10 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
-//styles
 import {
   CardsBodyStyles,
   SlideTitle,
-} from "../../styles/Homepage/cards/CardsBodyStyles.style";
-import { SlideDescription } from "./../../styles/Homepage/cards/CardsBodyStyles.style";
+} from "../../styles/homepage/cards/CardsBodyStyles.style";
+import { SlideDescription } from "../../styles/homepage/cards/CardsBodyStyles.style";
 
 const CardsBody = ({ item }) => {
   return (
@@ -17,13 +15,13 @@ const CardsBody = ({ item }) => {
           alt={item.title}
         />
       </div>
-      <Link to={`${item.pathName}`}>
+      <Link to={`${item.pathName}/${item.id}`}>
         <div>
           <SlideTitle>
-            <p>{item.slide.title}</p>
+            <p>{item.slides.slideTitle}</p>
           </SlideTitle>
           <SlideDescription>
-            <p>{item.slide.description}</p>
+            <p>{item.slides.slideDescription}</p>
           </SlideDescription>
         </div>
       </Link>
