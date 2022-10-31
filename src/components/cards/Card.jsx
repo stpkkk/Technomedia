@@ -1,12 +1,12 @@
 import CardsHeader from "./CardsHeader";
-import CardsBody from "./CardsBody";
+import Slider from "./Slider";
 
 const Card = ({ item, isHidden, handleClick }) => {
 
   return (
     <li key={item.id}>
       <CardsHeader item={item} handleClick={handleClick} />
-      {!isHidden && <CardsBody item={item} />}
+      {!isHidden && <Slider item={item} />}
     </li>
   );
 };

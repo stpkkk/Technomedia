@@ -1,6 +1,5 @@
-import { React, useState } from "react";
+import { useState } from "react";
 import { data } from "../../data/data";
-
 import { CardsContainer } from "../../styles/homepage/cards/CardsContainer.style";
 import Card from "./Card";
 

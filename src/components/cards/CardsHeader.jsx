@@ -1,4 +1,3 @@
-import React from "react";
 import { CardsHeaderStyles } from "../../styles/homepage/cards/CardsHeader.style";
 import CardSvg from "./CardsSvg";
 

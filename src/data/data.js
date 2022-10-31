@@ -5,10 +5,28 @@ export const data = [
     pathName: "article",
     svgColor: "#F5F879",
     image: "article-card",
-    slides: {
-      slideId: 0,
+    slider: {
+      sliderId: 0,
       slideTitle: "Как научиться вставать пораньше",
       slideDescription: "И чувствовать себя бодро весь день",
+      sliderImages: [
+        {
+          image:
+		  "article-card",
+        },
+        {
+          image:
+		  "course-card",
+        },
+        {
+          image:
+		  "media-card",
+        },
+        // {
+        //   image:
+        //     "https://cdnya.proimagescdn.ru/mainrek/newpro/e35d51a731c29b50ea32bd261d225a99.webp",
+        // },
+      ],
     },
     page: {
       title: "Как научиться вставать пораньше",
@@ -26,10 +44,28 @@ export const data = [
     pathName: "course",
     svgColor: "#42A2D9",
     image: "course-card",
-    slides: {
-      slideId: 1,
+    slider: {
+      sliderId: 1,
       slideTitle: "Как восстанавливаться не выезжая из города",
       slideDescription: "Простые упражнения для полного восстановления сил",
+	  sliderImages: [
+        {
+          image:
+		  "article-card",
+        },
+        {
+          image:
+		  "course-card",
+        },
+        {
+          image:
+		  "media-card",
+        },
+        // {
+        //   image:
+        //     "https://cdnya.proimagescdn.ru/mainrek/newpro/e35d51a731c29b50ea32bd261d225a99.webp",
+        // },
+      ],
     },
     page: {
       title: "Как восстанавливаться не выезжая из города",
@@ -45,10 +81,28 @@ export const data = [
     pathName: "media",
     svgColor: "#42D963",
     image: "media-card",
-    slides: {
-      slideId: 2,
+    slider: {
+      sliderId: 2,
       slideTitle: "Начните медитировать уже сейчас",
       slideDescription: "6 медитаций на каждый день",
+	  sliderImages: [
+        {
+          image:
+		  "article-card",
+        },
+        {
+          image:
+		  "course-card",
+        },
+        {
+          image:
+		  "media-card",
+        },
+        // {
+        //   image:
+        //     "https://cdnya.proimagescdn.ru/mainrek/newpro/e35d51a731c29b50ea32bd261d225a99.webp",
+        // },
+      ],
     },
     page: {
       title: "Body Scan",

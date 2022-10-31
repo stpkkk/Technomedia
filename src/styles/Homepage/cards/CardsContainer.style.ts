@@ -17,7 +17,6 @@ export const CardsContainer = styled.div`
       background: #333333;
       border-radius: 8px 8px 0px 0px;
       margin-right: 16px;
-      cursor: pointer;
     }
 
     li:last-child {

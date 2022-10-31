@@ -11,6 +11,7 @@
 //TODO word wrap text
 //TODO adaptive pages
 //TODO app structure
+//TODO pathname pages
 
 import { Route, Routes } from "react-router-dom";
 // import { useState } from "react";
@@ -24,7 +25,6 @@ import Media from "./pages/Media";
 import { GlobalStyles, Container } from "./styles/GlobalStyles.style";
 
 function App() {
-
   return (
     <>
       <GlobalStyles />

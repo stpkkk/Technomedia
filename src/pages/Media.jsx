@@ -1,8 +1,6 @@
-import Homepage from "./Homepage";
-
 import { Link } from "react-router-dom";
 import { data } from "../data/data";
-
+import Homepage from "./Homepage";
 import {
   SplitPage,
   SplitPageLeft,
