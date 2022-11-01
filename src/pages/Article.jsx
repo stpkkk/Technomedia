@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Homepage from "./Homepage";
 
-import { data } from "../data/data";
+import { cardsData } from "../data/cardsData";
 import {
   PageStyles,
   Header,
@@ -10,7 +10,7 @@ import {
   InfoItem,
   Text,
   Span,
-} from "../styles/homepage/PageStyles.styled";
+} from "../styles/homepage/PageStyles.style";
 
 import {
   SplitPage,
@@ -25,7 +25,7 @@ const Article = () => {
         <SplitPageRight />
       </Link>
       <Homepage />
-      {data.map((item) => {
+      {cardsData.map((item) => {
         if (item.id === 0) {
           return (
             <SplitPageLeft key={item.id}>

@@ -12,6 +12,8 @@
 //TODO adaptive pages
 //TODO app structure
 //TODO pathname pages
+//TODO wrap columns info
+//TODO player button
 
 import { Route, Routes } from "react-router-dom";
 // import { useState } from "react";

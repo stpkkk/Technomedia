@@ -1,6 +1,8 @@
+import { cardsData } from "../data/cardsData";
 import { Link } from "react-router-dom";
-import { data } from "../data/data";
 import Homepage from "./Homepage";
+import Player from "../components/Player";
+
 import {
   SplitPage,
   SplitPageLeft,
@@ -8,11 +10,11 @@ import {
 } from "../styles/elements/SplitPage.style";
 import {
   Header,
-  Image,
   Line,
   PageStyles,
   Text,
-} from "../styles/homepage/PageStyles.styled";
+} from "../styles/homepage/PageStyles.style";
+import { FlexContainer } from "../styles/elements/FlexContainer.style";
 
 const Media = () => {
   return (
@@ -21,7 +23,7 @@ const Media = () => {
         <SplitPageRight />
       </Link>
       <Homepage />
-      {data.map((item) => {
+      {cardsData.map((item) => {
         if (item.id === 2) {
           return (
             <SplitPageLeft key={item.id}>
@@ -31,13 +33,9 @@ const Media = () => {
                   {item.page.text}
                 </Text>
                 <Line marginTop="60px" marginBottom="13px" />
-                <Image
-                  src={require("../assets/img/" + item.page.image + ".png")}
-                  alt={item.page.title}
-                  height="150px"
-                  minWidth="150px"
-                  borderRadius="5.8px"
-                />
+                <FlexContainer maxWidth="692px">
+                  <Player item={item} />
+                </FlexContainer>
               </PageStyles>
             </SplitPageLeft>
           );

@@ -19,7 +19,7 @@ export const PageStyles = styled.div`
     letter-spacing: -0.01em;
     display: block;
     line-height: 111%;
-	color: #272727;
+    color: #272727;
   }
 `;
 
@@ -46,13 +46,12 @@ export const Image = styled.img`
 
 export const Info = styled.div`
   display: flex;
-  font-size: 12px;
-  line-height: 127%;
-  min-height: ${(props) => props.minHeight};
 `;
 export const InfoItem = styled.div`
   margin-right: 239.18px;
   margin-bottom: ${(props) => props.marginBottom};
+  font-size: 12px;
+  line-height: 127%;
 `;
 
 export const Text = styled.div`

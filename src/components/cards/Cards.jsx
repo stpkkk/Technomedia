@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { data } from "../../data/data";
+import { cardsData } from "../../data/cardsData";
 import { CardsContainer } from "../../styles/homepage/cards/CardsContainer.style";
 import Card from "./Card";
 
 const Cards = () => {
-  const initialHiddenCardsState = data.map((item) => {
+  const initialHiddenCardsState = cardsData.map((item) => {
     return {
       id: item.id,
       hidden: true,
@@ -30,7 +30,7 @@ const Cards = () => {
   return (
     <CardsContainer>
       <ul>
-        {data.map((item, index) => {
+        {cardsData.map((item, index) => {
           return (
             <Card
               key={index}

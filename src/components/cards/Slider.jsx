@@ -14,7 +14,7 @@ const Slider = ({ item }) => {
     setTimeout(
       () =>
         setCurrent((prevIndex) =>
-          prevIndex === item.slider.length - 1 ? 0 : prevIndex + 1
+          prevIndex === item.slider ? 0 : prevIndex + 1
         ),
       delay
     );

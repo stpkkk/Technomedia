@@ -1,4 +1,4 @@
-export const data = [
+export const cardsData = [
   {
     id: 0,
     name: "статьи",
@@ -98,6 +98,10 @@ export const data = [
       title: "Body Scan",
       image: "article-card",
       text: "Учимся наблюдать за своими телесными ощущениями, развиваем навык наблюдения без оценки и фиксируем то, что попадает в поле нашего внимания.",
+      audioTrack: {
+        name: "Sunny",
+        src: "https://www.bensound.com/bensound-music/bensound-sunny.mp3",
+      },
     },
   },
 ];
