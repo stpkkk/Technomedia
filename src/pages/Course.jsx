@@ -6,6 +6,16 @@ import {
   SplitPageLeft,
   SplitPageRight,
 } from "../styles/elements/SplitPage.style";
+import {
+  PageStyles,
+  Header,
+  Text,
+  Image,
+  Info,
+  Line,
+  InfoItem,
+  Span,
+} from "../styles/homepage/PageStyles.styled";
 
 const Course = () => {
   return (
@@ -18,26 +28,38 @@ const Course = () => {
         if (item.id === 1) {
           return (
             <SplitPageLeft key={item.id}>
-              <h2>{item.page.title}</h2>
-              <div>
-                <img
+              <PageStyles>
+                <Header maxWidth="40%">{item.page.title}</Header>
+                <Image
+                  marginTop="16px"
+                  marginBottom="17px"
+                  maxWidth="689px"
+                  height="361px"
+                  borderRadius="4px"
                   src={require("../assets/img/" + item.page.image + ".png")}
                   alt={item.page.title}
                 />
-              </div>
-              <div>{item.page.text}</div>
-              <div>
-                <div>
-                  <p>"#Tag" {item.page.tag}</p>
-                </div>
-                <div>
-                  <p>
-                    Статья подготовлена при поддержке
+                <Text
+                  maxWidth="506px"
+                  minHeight="121px"
+                  display="block"
+                  marginBottom="37px"
+                >
+                  {item.page.text}
+                </Text>
+                <Info>
+                  <InfoItem>
+                    <Span>#Tag(Категория)</Span>
+                    <p>{item.page.tag}</p>
+                  </InfoItem>
+                  <InfoItem>
+                    <Span>Курс подготовлена при поддержке</Span>
                     <a href="https://www.theabyss.com">{item.page.support}</a>
-                  </p>
-                </div>
-              </div>
-              <div></div>
+                  </InfoItem>
+                </Info>
+                <Line marginBottom="18px" marginTop="114px" />
+                <Span>Список уроков</Span>
+              </PageStyles>
             </SplitPageLeft>
           );
         }

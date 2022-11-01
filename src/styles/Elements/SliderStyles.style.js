@@ -8,8 +8,8 @@ export const SliderStyles = styled.div`
   justify-content: center;
   align-items: center;
   border-radius: 8px;
-  margin: 0 auto;
-  max-width: 456px; //?
+  width: 100%; 
+  background-size: cover;
 
   overflow: hidden; //адаптивность слайдера make the content flowing outside the element's box invisible
 
@@ -21,31 +21,6 @@ export const SliderStyles = styled.div`
     position: relative;
   }
 
-  .rightArrow {
-    position: absolute;
-    top: 50%;
-    right: 32px;
-    color: rgb(182, 171, 178);
-    cursor: pointer;
-    z-index: 10;
-    user-select: none;
-    font-size: 40px;
-    color: red;
-  }
-  .leftArrow {
-    position: absolute;
-    top: 50%;
-    left: 32px;
-    color: #c4c4c4;
-    cursor: pointer;
-    z-index: 10;
-    user-select: none;
-    font-size: 40px;
-    color: red;
-  }
-  .slide.active {
-    transition: ease-in-out 2000ms;
-  }
 `;
 
 export const SlideTitle = styled.div`
@@ -75,3 +50,5 @@ export const SlideDescription = styled.div`
     max-width: 65%;
   }
 `;
+
+

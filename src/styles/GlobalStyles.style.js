@@ -10,6 +10,10 @@ export const GlobalStyles = createGlobalStyle`
     format("opentype");
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -25,10 +29,6 @@ html {
 }
 
 body {
-  a {
-    color: #e5e5e5;
-    text-decoration: none;
-  }
   margin: 0;
   background-color: #272727;
   color: #e5e5e5;

@@ -5,29 +5,24 @@ export const data = [
     pathName: "article",
     svgColor: "#F5F879",
     image: "article-card",
-    slider: {
-      sliderId: 0,
-      slideTitle: "Как научиться вставать пораньше",
-      slideDescription: "И чувствовать себя бодро весь день",
-      sliderImages: [
-        {
-          image:
-		  "article-card",
-        },
-        {
-          image:
-		  "course-card",
-        },
-        {
-          image:
-		  "media-card",
-        },
-        // {
-        //   image:
-        //     "https://cdnya.proimagescdn.ru/mainrek/newpro/e35d51a731c29b50ea32bd261d225a99.webp",
-        // },
-      ],
-    },
+    slider: [
+      {
+        image: "article-card",
+        slideTitle: "1",
+        slideDescription: "1",
+      },
+      {
+        image: "course-card",
+        slideTitle: "2",
+        slideDescription: "2",
+      },
+      {
+        image: "media-card",
+        slideTitle: "3",
+        slideDescription: "3",
+      },
+    ],
+
     page: {
       title: "Как научиться вставать пораньше",
       tag: "Красота и здоровье",
@@ -35,6 +30,8 @@ export const data = [
       support: "Abyss.ssce",
       readTime: "5-7 мин",
       subTitle: "Используйте солнечный свет",
+      subText:
+        "Не переставлять будильник, не говорить «ещё пять минут» и не собираться потом в дикой спешке. Рассказываем, как приучить себя вставать настолько рано, насколько нужно. И, по возможности, не роптать.",
       text: "Утром сразу откройте шторы — это поможет быстрее проснуться. Если в вашем часовом поясе световой день слишком короткий, настройте «умный» будильник — пусть он имитирует солнечное утро: такой свет по утрам помогает регулировать циркадные ритмы, а это улучшает сон.",
     },
   },
@@ -44,29 +41,27 @@ export const data = [
     pathName: "course",
     svgColor: "#42A2D9",
     image: "course-card",
-    slider: {
-      sliderId: 1,
-      slideTitle: "Как восстанавливаться не выезжая из города",
-      slideDescription: "Простые упражнения для полного восстановления сил",
-	  sliderImages: [
-        {
-          image:
-		  "article-card",
-        },
-        {
-          image:
-		  "course-card",
-        },
-        {
-          image:
-		  "media-card",
-        },
-        // {
-        //   image:
-        //     "https://cdnya.proimagescdn.ru/mainrek/newpro/e35d51a731c29b50ea32bd261d225a99.webp",
-        // },
-      ],
-    },
+    slider: [
+      {
+        image: "article-card",
+        slideTitle: "Как восстанавливаться не выезжая из города - 1",
+        slideDescription:
+          "Простые упражнения для полного восстановления сил - 1",
+      },
+      {
+        image: "course-card",
+        slideTitle: "Как восстанавливаться не выезжая из города - 2",
+        slideDescription:
+          "Простые упражнения для полного восстановления сил - 2 ",
+      },
+      {
+        image: "media-card",
+        slideTitle: "Как восстанавливаться не выезжая из города - 3",
+        slideDescription:
+          "Простые упражнения для полного восстановления сил - 3",
+      },
+    ],
+
     page: {
       title: "Как восстанавливаться не выезжая из города",
       tag: "Красота и здоровье",
@@ -81,32 +76,27 @@ export const data = [
     pathName: "media",
     svgColor: "#42D963",
     image: "media-card",
-    slider: {
-      sliderId: 2,
-      slideTitle: "Начните медитировать уже сейчас",
-      slideDescription: "6 медитаций на каждый день",
-	  sliderImages: [
-        {
-          image:
-		  "article-card",
-        },
-        {
-          image:
-		  "course-card",
-        },
-        {
-          image:
-		  "media-card",
-        },
-        // {
-        //   image:
-        //     "https://cdnya.proimagescdn.ru/mainrek/newpro/e35d51a731c29b50ea32bd261d225a99.webp",
-        // },
-      ],
-    },
+    slider: [
+      {
+        image: "article-card",
+        slideTitle: "Начните медитировать уже сейчас - 1",
+        slideDescription: "6 медитаций на каждый день - 1",
+      },
+      {
+        image: "course-card",
+        slideTitle: "Начните медитировать уже сейчас - 2",
+        slideDescription: "6 медитаций на каждый день - 2 ",
+      },
+      {
+        image: "media-card",
+        slideTitle: "Начните медитировать уже сейчас - 3",
+        slideDescription: "6 медитаций на каждый день - 3",
+      },
+    ],
+
     page: {
       title: "Body Scan",
-      image: "",
+      image: "article-card",
       text: "Учимся наблюдать за своими телесными ощущениями, развиваем навык наблюдения без оценки и фиксируем то, что попадает в поле нашего внимания.",
     },
   },

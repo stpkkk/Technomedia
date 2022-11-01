@@ -6,11 +6,7 @@ export const CardsHeaderStyles = styled.div`
   align-items: center;
   font-size: 11px;
   line-height: 135%;
-  padding: 19px 10px 0 10px;
+  padding: 19px 10px;
   text-transform: uppercase;
-  margin-bottom: 27px;
   cursor: pointer;
-
-  
-  /* identical to box height, or 15px */
 `;

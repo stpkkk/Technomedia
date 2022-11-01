@@ -6,6 +6,13 @@ import {
   SplitPageLeft,
   SplitPageRight,
 } from "../styles/elements/SplitPage.style";
+import {
+  Header,
+  Image,
+  Line,
+  PageStyles,
+  Text,
+} from "../styles/homepage/PageStyles.styled";
 
 const Media = () => {
   return (
@@ -18,14 +25,20 @@ const Media = () => {
         if (item.id === 2) {
           return (
             <SplitPageLeft key={item.id}>
-              <h2>{item.page.title}</h2>
-              <p>{item.page.text}</p>
-              <div>
-                {/* <img
+              <PageStyles>
+                <Header>{item.page.title}</Header>
+                <Text maxWidth="582px" lineHeight="120%" marginTop="10px">
+                  {item.page.text}
+                </Text>
+                <Line marginTop="60px" marginBottom="13px" />
+                <Image
                   src={require("../assets/img/" + item.page.image + ".png")}
                   alt={item.page.title}
-                /> */}
-              </div>
+                  height="150px"
+                  minWidth="150px"
+                  borderRadius="5.8px"
+                />
+              </PageStyles>
             </SplitPageLeft>
           );
         }
