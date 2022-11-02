@@ -1,11 +1,11 @@
 import React from "react";
-import { StyledLoader } from "./../styles/elements/StyledLoader.style";
+import { Loader } from "./../styles/elements/Loader.style";
 
 const Loader = () => {
   return (
-    <StyledLoader>
+    <Loader>
       <div className="loader"></div>
-    </StyledLoader>
+    </Loader>
   );
 };
 

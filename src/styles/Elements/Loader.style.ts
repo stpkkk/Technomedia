@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledLoader = styled.div`
+const Loader = styled.div`
   width: 60px;
   height: 60px;
   position: relative;
@@ -43,4 +43,4 @@ const StyledLoader = styled.div`
   }
 `;
 
-export default StyledLoader;
+export default Loader;

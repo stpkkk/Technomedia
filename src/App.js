@@ -19,7 +19,7 @@
 import { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 
-import StyledLoader from "./styles/elements/StyledLoader.style";
+import Loader from "./styles/elements/Loader.style";
 import Burger from "./components/Burger";
 import Homepage from "./pages/Homepage";
 import Article from "./pages/Article";
@@ -73,7 +73,7 @@ function App() {
 
     fetchData();
   }, []);
-  if (loading) return <StyledLoader />;
+  if (loading) return <Loader />;
   return (
     <AppContext.Provider
       value={{
