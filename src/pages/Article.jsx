@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import Homepage from "./Homepage";
 
-import { cardsData } from "../data/cardsData";
 import {
   PageStyles,
   Header,
@@ -18,7 +17,7 @@ import {
   SplitPageRight,
 } from "../styles/elements/SplitPage.style";
 
-const Article = () => {
+const Article = ({ cardsData }) => {
   return (
     <SplitPage>
       <Link to="/">

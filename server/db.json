@@ -1,11 +1,12 @@
 {
-  "cardsData": [
+  "cardsDataBase": [
     {
       "id": 0,
       "name": "статьи",
       "pathName": "article",
       "svgColor": "#F5F879",
       "image": "article-card",
+      "hidden": true,
       "slider": [
         {
           "image": "article-card",
@@ -41,6 +42,7 @@
       "pathName": "course",
       "svgColor": "#42A2D9",
       "image": "course-card",
+      "hidden": true,
       "slider": [
         {
           "image": "article-card",
@@ -73,6 +75,7 @@
       "pathName": "media",
       "svgColor": "#42D963",
       "image": "media-card",
+      "hidden": true,
       "slider": [
         {
           "image": "article-card",

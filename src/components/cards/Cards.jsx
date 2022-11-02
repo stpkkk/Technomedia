@@ -1,9 +1,12 @@
-import { useState } from "react";
-import { cardsData } from "../../data/cardsData";
+import { useState, useContext } from "react";
 import { CardsContainer } from "../../styles/homepage/cards/CardsContainer.style";
 import Card from "./Card";
+import AppContext from "../../context/context";
 
 const Cards = () => {
+  const { cardsData } = useContext(AppContext);
+
+  //open and close cards
   const initialHiddenCardsState = cardsData.map((item) => {
     return {
       id: item.id,

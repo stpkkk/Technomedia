@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { cardsData } from "../data/cardsData";
 import Homepage from "./Homepage";
 import {
   SplitPage,
@@ -17,7 +16,7 @@ import {
   Span,
 } from "../styles/homepage/PageStyles.style";
 
-const Course = () => {
+const Course = ({ cardsData }) => {
   return (
     <SplitPage>
       <Link to="/">

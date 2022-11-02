@@ -1,7 +1,6 @@
-import { cardsData } from "../data/cardsData";
-import { Link } from "react-router-dom";
 import Homepage from "./Homepage";
 import Player from "../components/Player";
+import { Link } from "react-router-dom";
 
 import {
   SplitPage,
@@ -16,7 +15,7 @@ import {
 } from "../styles/homepage/PageStyles.style";
 import { FlexContainer } from "../styles/elements/FlexContainer.style";
 
-const Media = () => {
+const Media = ({ cardsData }) => {
   return (
     <SplitPage>
       <Link to="/">
