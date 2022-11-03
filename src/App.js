@@ -1,10 +1,10 @@
 //TODO css main section p div h123 span...
 //TODO TS
 //TODO Cards
-//TODO JSON
+//  JSON
 //TODO Sliders
 //TODO anime
-//TODO audio
+// audio
 //TODO how to dwnld img frm figma(size)
 //TODO rename img
 //TODO init font size
@@ -15,6 +15,7 @@
 //TODO wrap columns info
 //TODO player button
 //TODO refactor Loader
+//TODO fix nest cards 
 
 import { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
@@ -32,28 +33,6 @@ import { GlobalStyles, Container } from "./styles/GlobalStyles.style";
 function App() {
   const [loading, setLoading] = useState(false);
   const [cardsData, setCardsData] = useState([]);
-
-  //   //open and close cards
-  //   const initialHiddenCardsState = cardsData.map((item) => {
-  //     return {
-  //       id: item.id,
-  //       hidden: item.hidden,
-  //     };
-  //   });
-  //   const [hiddenCardsState, setHiddenCardsState] = useState([]);
-
-  //   const handleClick = (id) => {
-  //     setHiddenCardsState(
-  //       cardsData.map((item) => {
-  //         if (item.id === id) {
-  //           item.hidden = !item.hidden;
-  //         } else {
-  //           item.hidden = true;
-  //         }
-  //         return item;
-  //       })
-  //     );
-  //   };
 
   useEffect(() => {
     async function fetchData() {
@@ -78,15 +57,13 @@ function App() {
     <AppContext.Provider
       value={{
         cardsData,
-        // hiddenCardsState,
-        // handleClick,
       }}
     >
       <GlobalStyles />
       <Burger />
       <Container>
         <Routes>
-          <Route path="/" element={<Homepage cardsData={cardsData} />} />
+          <Route path="/" element={<Homepage />} />
           <Route
             path="/article/:id"
             element={<Article cardsData={cardsData} />}

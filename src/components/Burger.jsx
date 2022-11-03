@@ -6,7 +6,7 @@ const Burger = () => {
   return (
     <Link to="/">
       <BurgerStyles>
-        <img src={burger} alt="burger" onClick={""} />
+        <img src={burger} alt="burger" />
       </BurgerStyles>
     </Link>
   );

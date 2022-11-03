@@ -10,18 +10,23 @@
       "slider": [
         {
           "image": "article-card",
-          "slideTitle": "1",
-          "slideDescription": "1"
+          "slideTitle": "Как научиться вставать пораньше - 1",
+          "slideDescription": "И чувствовать себя бодро весь день - 1"
         },
         {
           "image": "course-card",
-          "slideTitle": "2",
-          "slideDescription": "2"
+          "slideTitle": "Как научиться вставать пораньше - 2",
+          "slideDescription": "И чувствовать себя бодро весь день - 2"
         },
         {
           "image": "media-card",
-          "slideTitle": "3",
-          "slideDescription": "3"
+          "slideTitle": "Как научиться вставать пораньше - 3",
+          "slideDescription": "И чувствовать себя бодро весь день - 3"
+        },
+        {
+          "image": "course-card",
+          "slideTitle": "Как научиться вставать пораньше - 4",
+          "slideDescription": "И чувствовать себя бодро весь день - 4"
         }
       ],
 
@@ -58,6 +63,11 @@
           "image": "media-card",
           "slideTitle": "Как восстанавливаться не выезжая из города - 3",
           "slideDescription": "Простые упражнения для полного восстановления сил - 3"
+        },
+        {
+          "image": "course-card",
+          "slideTitle": "Как восстанавливаться не выезжая из города - 4",
+          "slideDescription": "Простые упражнения для полного восстановления сил - 4"
         }
       ],
 
@@ -91,6 +101,11 @@
           "image": "media-card",
           "slideTitle": "Начните медитировать уже сейчас - 3",
           "slideDescription": "6 медитаций на каждый день - 3"
+        },
+        {
+          "image": "course-card",
+          "slideTitle": "Начните медитировать уже сейчас - 4",
+          "slideDescription": "6 медитаций на каждый день - 4"
         }
       ],
 

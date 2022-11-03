@@ -1,11 +1,12 @@
 import CardsHeader from "./CardsHeader";
-import Slider from "./Slider";
+import CardStories from "./CardStories";
 
 const Card = ({ item, isHidden, handleClick }) => {
+	
   return (
     <li>
       <CardsHeader item={item} handleClick={handleClick} />
-      {!isHidden && <Slider item={item} />}
+      {!isHidden && <CardStories item={item} isHidden={isHidden}/>}
     </li>
   );
 };

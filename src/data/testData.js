@@ -1,4 +1,4 @@
-export const cardsData = [
+export const test = [
   {
     id: 0,
     name: "статьи",
@@ -103,5 +103,12 @@ export const cardsData = [
         src: "https://www.bensound.com/bensound-music/bensound-sunny.mp3",
       },
     },
+  },
+];
+
+images: [
+  {
+    image: "article-card",
+    image: "course-card",
   },
 ];
