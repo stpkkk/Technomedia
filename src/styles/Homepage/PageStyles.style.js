@@ -1,66 +1,66 @@
 import styled from "styled-components";
 
 export const PageStyles = styled.div`
-  margin: 44px 21px;
-  color: #272727;
+  margin: ${(props) => props.margin};
+  color: ${(props) => props.color};
   font-size: 16px;
-  line-height: 111%;
-  /* or 18px */
 
   a {
     color: #272727;
-    text-decoration: underline;
   }
 
   h1,
   h2 {
-    font-size: 30px;
-    font-weight: normal;
-    letter-spacing: -0.01em;
     display: block;
+    font-size: 30px;
     line-height: 111%;
     color: #272727;
+    letter-spacing: -0.01em;
   }
 `;
 
 export const Span = styled.span`
+  padding-bottom: ${(props) => props.paddingBottom};
   color: #959595;
   font-size: 12px;
   line-height: 127%;
   display: block;
-  padding-bottom: ${(props) => props.paddingBottom};
 `;
 
 export const Image = styled.img`
   max-width: ${(props) => props.maxWidth};
   min-width: ${(props) => props.minWidth};
-  margin-bottom: ${(props) => props.marginBottom};
-  margin-right: 26px;
-  margin-top: ${(props) => props.marginTop};
+  margin: ${(props) => props.margin};
   height: ${(props) => props.height};
   border-radius: ${(props) => props.borderRadius};
-  object-fit: cover;
-  background: #ffffff;
+  background: #123123;
   object-position: top;
+  width: 100%;
+  height: auto;
 `;
 
 export const Info = styled.div`
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
 `;
+
 export const InfoItem = styled.div`
-  margin-right: 239.18px;
-  margin-bottom: ${(props) => props.marginBottom};
+  margin: 0 239.18px 29px 0;
   font-size: 12px;
   line-height: 127%;
 `;
 
 export const Text = styled.div`
-  margin-top: ${(props) => props.marginTop};
   max-width: ${(props) => props.maxWidth};
-  display: ${(props) => props.block};
   min-height: ${(props) => props.minHeight};
-  margin-bottom: ${(props) => props.marginBottom};
+  margin: ${(props) => props.margin};
+  padding-bottom: ${(props) => props.paddingBottom};
+  color: ${(props) => props.color};
+  font-size: ${(props) => props.fontSize};
   line-height: ${(props) => props.lineHeight};
+  letter-spacing: ${(props) => props.letterSpacing};
 `;
 
 export const Header = styled.h1`
@@ -69,7 +69,6 @@ export const Header = styled.h1`
 
 export const Line = styled.div`
   max-width: 692px;
-  margin-top: ${(props) => props.marginTop};
   border-bottom: solid 1px #b5b5b5;
-  margin-bottom: ${(props) => props.marginBottom};
+  margin: ${(props) => props.margin};
 `;

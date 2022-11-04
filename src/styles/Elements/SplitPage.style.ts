@@ -1,12 +1,7 @@
 import styled from "styled-components";
 
-export const SplitPage = styled.div`
-  position: absolute; //?
-`;
-
 export const SplitPageLeft = styled.div`
-
-  width: 50%;
+  min-width: 50%;
   top: 0;
   left: 0%;
   background-color: #ffffff;
@@ -14,7 +9,6 @@ export const SplitPageLeft = styled.div`
   position: fixed;
   height: 100%;
   overflow: scroll;
-
 `;
 
 export const SplitPageRight = styled.div`

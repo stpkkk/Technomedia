@@ -15,7 +15,6 @@ export const CustomPlayer = styled.div`
 
   .rhap_main-controls-button {
     color: #ffffff;
-    font-size: 45px;
     position: absolute;
     top: 35%;
     left: 32%;

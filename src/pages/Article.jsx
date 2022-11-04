@@ -2,24 +2,23 @@ import { Link } from "react-router-dom";
 import Homepage from "./Homepage";
 
 import {
-  PageStyles,
-  Header,
-  Image,
-  Info,
-  InfoItem,
-  Text,
-  Span,
-} from "../styles/homepage/PageStyles.style";
-
-import {
-  SplitPage,
   SplitPageLeft,
   SplitPageRight,
 } from "../styles/elements/SplitPage.style";
 
+import {
+  PageStyles,
+  Header,
+  Image,
+  Text,
+  Span,
+  Info,
+  InfoItem,
+} from "../styles/homepage/PageStyles.style";
+
 const Article = ({ cardsData }) => {
   return (
-    <SplitPage>
+    <>
       <Link to="/">
         <SplitPageRight />
       </Link>
@@ -28,14 +27,12 @@ const Article = ({ cardsData }) => {
         if (item.id === 0) {
           return (
             <SplitPageLeft key={item.id}>
-              <PageStyles>
-                <Header maxWidth="100%">{item.page.title}</Header>
+              <PageStyles margin="44px 21px" color="#272727">
+                <Header>{item.page.title}</Header>
                 <Image
-                  marginTop="20px"
-                  marginBottom="20px"
                   maxWidth="689px"
                   height="361px"
-                  borderRadius="4px"
+                  margin="20px 0 20px 0"
                   src={require("../assets/img/" + item.page.image + ".png")}
                   alt={item.page.title}
                 />
@@ -45,7 +42,7 @@ const Article = ({ cardsData }) => {
                     <p>{item.page.tag}</p>
                   </InfoItem>
                   <div>
-                    <InfoItem marginBottom="29px">
+                    <InfoItem>
                       <Span> Статья подготовлена при поддержке</Span>
                       <a href="https://www.theabyss.com">{item.page.support}</a>
                     </InfoItem>
@@ -55,16 +52,11 @@ const Article = ({ cardsData }) => {
                     </InfoItem>
                   </div>
                 </Info>
-                <Text
-                  maxWidth="602px"
-                  marginTop="60px"
-                  marginBottom="72px"
-                  lineHeight="111%"
-                >
+                <Text maxWidth="602px" margin="31px 0 72px 0" lineHeight="111%">
                   {item.page.subText}
                 </Text>
                 <h2>{item.page.subTitle}</h2>
-                <Text maxWidth="626px" lineHeight="120%" marginTop="14px">
+                <Text maxWidth="626px" lineHeight="120%" margin="14px 0 0 0">
                   <p>{item.page.text}</p>
                 </Text>
               </PageStyles>
@@ -73,7 +65,7 @@ const Article = ({ cardsData }) => {
         }
         return null;
       })}
-    </SplitPage>
+    </>
   );
 };
 

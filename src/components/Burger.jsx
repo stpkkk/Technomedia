@@ -1,6 +1,6 @@
-import burger from "../assets/img/burger.svg";
-import { BurgerStyles } from "../styles/elements/BurgerStyles.style";
 import { Link } from "react-router-dom";
+import { BurgerStyles } from "../styles/elements/BurgerStyles.style";
+import burger from "../assets/img/burger.svg";
 
 const Burger = () => {
   return (

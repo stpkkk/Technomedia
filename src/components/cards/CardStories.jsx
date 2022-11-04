@@ -1,51 +1,54 @@
-import { useState, useContext } from "react";
+//https://mohitk05.github.io/react-insta-stories/
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import Stories from "react-insta-stories";
-import { StoriesStyles } from "../../styles/elements/StoriesStyles.style";
-
 import {
-  SliderStyles,
+  CardStoriesStyles,
   SlideTitle,
-  SlideDescription,
-} from "../../styles/elements/SliderStyles.style";
+} from "../../styles/elements/CardStoriesStyles.style";
+import Stories, { WithSeeMore } from "react-insta-stories";
 
 const CardStories = ({ item, isHidden }) => {
   const [currentId, setCurrentId] = useState(0);
   const stories = item.slider.map((slide, index) => ({
-    content: () => {
+    content: ({ action, story }) => {
       return (
-        <StoriesStyles key={index}>
-          <img
-            src={require("../../assets/img/" + slide.image + ".png")}
-            alt={"article-card"}
-          />
-          <Link to={`${item.pathName}/${item.id}`}>
-            <div>
-              <SlideTitle>
-                <p>{slide.slideTitle}</p>
-              </SlideTitle>
-              <SlideDescription>
-                <p>{slide.slideDescription}</p>
-              </SlideDescription>
-            </div>
-          </Link>
-        </StoriesStyles>
+        <CardStoriesStyles
+          key={index}
+          //   backgroundImg={require("../../assets/img/" + slide.image + ".png")}
+        >
+          <WithSeeMore story={story} action={action}>
+            <img
+              src={require("../../assets/img/" + slide.image + ".png")}
+              alt={"article-card"}
+            />
+          </WithSeeMore>
+        </CardStoriesStyles>
       );
     },
+
+    seeMore: () => <p>Something goes wrong</p>,
+    seeMoreCollapsed: ({ action }) => (
+      <SlideTitle component={Link}>
+        <Link to={`${item.pathName}/${item.id}`}>
+          <h3>{slide.slideTitle}</h3>
+          <p>{slide.slideDescription}</p>
+        </Link>
+      </SlideTitle>
+    ),
   }));
 
   return (
-    <SliderStyles>
+    <CardStoriesStyles>
       <Stories
         key={item.id}
         width={456}
-        height={695} //?
+        height={675} //?
         currentIndex={currentId}
         keyboardNavigation
         defaultInterval={5000}
         stories={stories}
+        loop={false}
         storyContainerStyles={{
-          borderRadius: 8,
           color: "red",
           background: " #333333",
           bottom: 10,
@@ -54,16 +57,15 @@ const CardStories = ({ item, isHidden }) => {
           setCurrentId((currentId) => currentId + 1);
         }}
         onAllStoriesEnd={() => {
-          {
-            isHidden = true;
-          }
+          isHidden = true;
           setCurrentId((currentId) => 0);
         }}
         onStoryStart={() => {
           setCurrentId((currentId) => currentId + 1 - 1);
         }}
       />
-    </SliderStyles>
+    </CardStoriesStyles>
   );
 };
+
 export default CardStories;

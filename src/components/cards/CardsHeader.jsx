@@ -9,10 +9,10 @@ const CardsHeader = ({ item, handleClick }) => {
           handleClick(item.id);
         }}
       >
-		<div>
-        <span>{item.name}</span>
-        <CardSvg fill={item.svgColor} />
-		</div>
+        <div>
+          <span>{item.name}</span>
+          <CardSvg fill={item.svgColor} />
+        </div>
       </CardsHeaderStyles>
     </div>
   );

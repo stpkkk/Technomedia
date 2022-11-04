@@ -3,7 +3,6 @@ import Player from "../components/Player";
 import { Link } from "react-router-dom";
 
 import {
-  SplitPage,
   SplitPageLeft,
   SplitPageRight,
 } from "../styles/elements/SplitPage.style";
@@ -17,7 +16,7 @@ import { FlexContainer } from "../styles/elements/FlexContainer.style";
 
 const Media = ({ cardsData }) => {
   return (
-    <SplitPage>
+    <>
       <Link to="/">
         <SplitPageRight />
       </Link>
@@ -26,12 +25,12 @@ const Media = ({ cardsData }) => {
         if (item.id === 2) {
           return (
             <SplitPageLeft key={item.id}>
-              <PageStyles>
+              <PageStyles margin="44px 21px" color="#272727">
                 <Header>{item.page.title}</Header>
-                <Text maxWidth="582px" lineHeight="120%" marginTop="10px">
+                <Text maxWidth="582px" lineHeight="120%" margin="10px 0 0 0">
                   {item.page.text}
                 </Text>
-                <Line marginTop="60px" marginBottom="13px" />
+                <Line margin="60px 0 13px 0" />
                 <FlexContainer maxWidth="692px">
                   <Player item={item} />
                 </FlexContainer>
@@ -41,7 +40,7 @@ const Media = ({ cardsData }) => {
         }
         return null;
       })}
-    </SplitPage>
+    </>
   );
 };
 

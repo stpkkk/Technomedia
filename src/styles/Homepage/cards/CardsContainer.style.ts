@@ -5,7 +5,6 @@ export const CardsContainer = styled.div`
   bottom: 0;
   width: 100%;
   max-width: 1440px;
-  max-height: 734px;
 
   ul {
     display: flex;

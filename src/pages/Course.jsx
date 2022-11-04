@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import Homepage from "./Homepage";
 import {
-  SplitPage,
   SplitPageLeft,
   SplitPageRight,
 } from "../styles/elements/SplitPage.style";
@@ -18,7 +17,7 @@ import {
 
 const Course = ({ cardsData }) => {
   return (
-    <SplitPage>
+    <>
       <Link to="/">
         <SplitPageRight />
       </Link>
@@ -27,13 +26,12 @@ const Course = ({ cardsData }) => {
         if (item.id === 1) {
           return (
             <SplitPageLeft key={item.id}>
-              <PageStyles>
+              <PageStyles margin="44px 21px" color="#272727">
                 <Header maxWidth="40%">{item.page.title}</Header>
                 <Image
-                  marginTop="16px"
-                  marginBottom="17px"
                   maxWidth="689px"
                   height="361px"
+                  margin="16px 0 16px 0"
                   borderRadius="4px"
                   src={require("../assets/img/" + item.page.image + ".png")}
                   alt={item.page.title}
@@ -41,8 +39,8 @@ const Course = ({ cardsData }) => {
                 <Text
                   maxWidth="506px"
                   minHeight="121px"
+                  margin="0 0 37px 0"
                   display="block"
-                  marginBottom="37px"
                 >
                   {item.page.text}
                 </Text>
@@ -56,7 +54,7 @@ const Course = ({ cardsData }) => {
                     <a href="https://www.theabyss.com">{item.page.support}</a>
                   </InfoItem>
                 </Info>
-                <Line marginBottom="18px" marginTop="114px" />
+                <Line margin="114px 0 18px 0" />
                 <Span>Список уроков</Span>
               </PageStyles>
             </SplitPageLeft>
@@ -64,7 +62,7 @@ const Course = ({ cardsData }) => {
         }
         return null;
       })}
-    </SplitPage>
+    </>
   );
 };
 

@@ -1,21 +1,20 @@
 //TODO css main section p div h123 span...
 //TODO TS
-//TODO Cards
+// Cards
 //  JSON
-//TODO Sliders
+//TODO Link Sliders
 //TODO anime
 // audio
 //TODO how to dwnld img frm figma(size)
 //TODO rename img
-//TODO init font size
-//TODO word wrap text
-//TODO adaptive pages
+//init font size
+// word wrap text
+// adaptive pages
 //TODO app structure
 //TODO pathname pages
-//TODO wrap columns info
+// wrap columns info
 //TODO player button
 //TODO refactor Loader
-//TODO fix nest cards 
 
 import { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
