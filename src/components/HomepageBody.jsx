@@ -1,4 +1,4 @@
-import { PageStyles, Text } from "./../styles/homepage/PageStyles.style";
+import { PageStyles, Text } from "../styles/PageStyles.style";
 
 const HomepageBody = () => {
   return (

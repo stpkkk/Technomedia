@@ -7,8 +7,10 @@ export const CardStoriesStyles = styled.div`
   width: 100%;
   border-radius: 8px 8px 0 0;
   top: 10px;
-
+  /* transition: transform 3s ease-out;
+  transform: translateY(-10%); */
   overflow: hidden;
+
   img {
     position: relative;
     margin-top: 10px;
@@ -23,6 +25,7 @@ export const SlideTitle = styled.div`
   left: 20px;
   color: #ffffff;
   letter-spacing: -0.01em;
+
   a {
     color: #ffffff;
     text-decoration: none;

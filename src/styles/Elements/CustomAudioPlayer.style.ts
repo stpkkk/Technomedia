@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-export const CustomPlayer = styled.div`
+type Props = {
+  backgroundImg: string;
+};
+
+export const CustomPlayer = styled.div<Props>`
   background: url(${(props) => props.backgroundImg});
   width: 150px;
   height: 150px;

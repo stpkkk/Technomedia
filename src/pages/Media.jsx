@@ -11,7 +11,7 @@ import {
   Line,
   PageStyles,
   Text,
-} from "../styles/homepage/PageStyles.style";
+} from "../styles/PageStyles.style";
 import { FlexContainer } from "../styles/elements/FlexContainer.style";
 
 const Media = ({ cardsData }) => {

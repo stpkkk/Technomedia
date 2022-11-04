@@ -13,7 +13,7 @@ import {
   Line,
   InfoItem,
   Span,
-} from "../styles/homepage/PageStyles.style";
+} from "../styles/PageStyles.style";
 
 const Course = ({ cardsData }) => {
   return (

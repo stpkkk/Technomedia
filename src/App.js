@@ -15,6 +15,7 @@
 // wrap columns info
 //TODO player button
 //TODO refactor Loader
+//TODO fix nest cards
 
 import { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
@@ -32,6 +33,18 @@ import { GlobalStyles, Container } from "./styles/GlobalStyles.style";
 function App() {
   const [loading, setLoading] = useState(false);
   const [cardsData, setCardsData] = useState([]);
+
+  //open and close cards
+  const initialHiddenCardsState = cardsData.map((item) => {
+    return {
+      id: item.id,
+      hidden: true,
+    };
+  });
+
+  const [hiddenCardsState, setHiddenCardsState] = useState(
+    initialHiddenCardsState
+  );
 
   useEffect(() => {
     async function fetchData() {
@@ -51,11 +64,17 @@ function App() {
 
     fetchData();
   }, []);
-  if (loading) return <Loader />;
+
+  if (loading) {
+    return <Loader />;
+  }
+
   return (
     <AppContext.Provider
       value={{
         cardsData,
+        hiddenCardsState,
+        setHiddenCardsState,
       }}
     >
       <GlobalStyles />

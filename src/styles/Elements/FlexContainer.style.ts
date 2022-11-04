@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-export const FlexContainer = styled.div`
+type Props = {
+  maxWidth: string;
+};
+
+export const FlexContainer = styled.div<Props>`
   display: flex;
   justify-content: space-between;
   align-items: center;

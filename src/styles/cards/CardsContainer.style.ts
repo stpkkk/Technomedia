@@ -12,11 +12,13 @@ export const CardsContainer = styled.div`
     align-items: flex-end;
 
     li {
+
       list-style: none;
       width: 33.3%;
       background: #333333;
       border-radius: 8px 8px 0px 0px;
       margin-right: 16px;
+	  
     }
 
     li:last-child {

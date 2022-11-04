@@ -4,8 +4,9 @@ import { Link } from "react-router-dom";
 import {
   CardStoriesStyles,
   SlideTitle,
-} from "../../styles/elements/CardStoriesStyles.style";
+} from "../../styles/cards/CardStoriesStyles.style";
 import Stories, { WithSeeMore } from "react-insta-stories";
+import styles from "../../styles/styletest.scss";
 
 const CardStories = ({ item, isHidden }) => {
   const [currentId, setCurrentId] = useState(0);
@@ -38,7 +39,7 @@ const CardStories = ({ item, isHidden }) => {
   }));
 
   return (
-    <CardStoriesStyles>
+    <CardStoriesStyles >
       <Stories
         key={item.id}
         width={456}

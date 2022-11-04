@@ -1,5 +1,5 @@
-import { CardsHeaderStyles } from "../../styles/homepage/cards/CardsHeader.style";
-import CardSvg from "./CardsSvg";
+import { CardsHeaderStyles } from "../../styles/cards/CardsHeader.style";
+import CardsSvg from "./CardsSvg";
 
 const CardsHeader = ({ item, handleClick }) => {
   return (
@@ -11,7 +11,7 @@ const CardsHeader = ({ item, handleClick }) => {
       >
         <div>
           <span>{item.name}</span>
-          <CardSvg fill={item.svgColor} />
+          <CardsSvg fill={item.svgColor} />
         </div>
       </CardsHeaderStyles>
     </div>
