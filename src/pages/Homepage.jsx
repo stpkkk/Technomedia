@@ -1,11 +1,11 @@
 import HomepageBody from "../components/HomepageBody";
 import Cards from "../components/cards/Cards";
 
-const Homepage = () => {
+const Homepage = ({ cardsData }) => {
   return (
     <>
       <HomepageBody />
-      <Cards />
+      <Cards cardsData={cardsData} />
     </>
   );
 };

@@ -1,16 +1,19 @@
 //https://mohitk05.github.io/react-insta-stories/
-import { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import {
   CardStoriesStyles,
   SlideTitle,
 } from "../../styles/cards/CardStoriesStyles.style";
 import Stories, { WithSeeMore } from "react-insta-stories";
-import styles from "../../styles/styletest.scss";
+import AppContext from "../../context/context";
 
-const CardStories = ({ item, isHidden }) => {
+const CardStories = ({ cardsItem }) => {
   const [currentId, setCurrentId] = useState(0);
-  const stories = item.slider.map((slide, index) => ({
+
+  const { closeCards }: any = useContext(AppContext);
+
+  const stories = cardsItem.slider.map((slide, index: number) => ({
     content: ({ action, story }) => {
       return (
         <CardStoriesStyles
@@ -29,8 +32,8 @@ const CardStories = ({ item, isHidden }) => {
 
     seeMore: () => <p>Something goes wrong</p>,
     seeMoreCollapsed: ({ action }) => (
-      <SlideTitle component={Link}>
-        <Link to={`${item.pathName}/${item.id}`}>
+      <SlideTitle>
+        <Link to={`${cardsItem.pathName}/${cardsItem.id}`}>
           <h3>{slide.slideTitle}</h3>
           <p>{slide.slideDescription}</p>
         </Link>
@@ -39,11 +42,11 @@ const CardStories = ({ item, isHidden }) => {
   }));
 
   return (
-    <CardStoriesStyles >
+    <CardStoriesStyles>
       <Stories
-        key={item.id}
+        key={cardsItem.id}
         width={456}
-        height={675} //?
+        height={675}
         currentIndex={currentId}
         keyboardNavigation
         defaultInterval={5000}
@@ -58,8 +61,8 @@ const CardStories = ({ item, isHidden }) => {
           setCurrentId((currentId) => currentId + 1);
         }}
         onAllStoriesEnd={() => {
-          isHidden = true;
           setCurrentId((currentId) => 0);
+          closeCards();
         }}
         onStoryStart={() => {
           setCurrentId((currentId) => currentId + 1 - 1);

@@ -14,10 +14,9 @@
 //TODO pathname pages
 // wrap columns info
 //TODO player button
-//TODO refactor Loader
-//TODO fix nest cards
+//TODO Loader
 
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 
 import Loader from "./styles/elements/Loader.style";
@@ -29,22 +28,21 @@ import Media from "./pages/Media";
 import AppContext from "./context/context";
 
 import { GlobalStyles, Container } from "./styles/GlobalStyles.style";
+import { ICardsData } from "./@types/cards";
 
-function App() {
-  const [loading, setLoading] = useState(false);
-  const [cardsData, setCardsData] = useState([]);
+const App: React.FC = () => {
+  const [loading, setLoading] = useState<boolean>(false);
+  const [cardsData, setCardsData] = useState<ICardsData[]>([]);
+  const [hiddenCardsState, setHiddenCardsState] = useState<ICardsData[]>([]);
 
-  //open and close cards
-  const initialHiddenCardsState = cardsData.map((item) => {
-    return {
-      id: item.id,
-      hidden: true,
-    };
-  });
-
-  const [hiddenCardsState, setHiddenCardsState] = useState(
-    initialHiddenCardsState
-  );
+  const closeCards = () => {
+    setHiddenCardsState(
+      hiddenCardsState.map((item) => {
+        item.hidden = true;
+        return item;
+      })
+    );
+  };
 
   useEffect(() => {
     async function fetchData() {
@@ -54,6 +52,14 @@ function App() {
 
         const jsonData = await res.json();
         setCardsData(jsonData);
+        setHiddenCardsState(
+          jsonData.map((item: { id: number }) => {
+            return {
+              id: item.id,
+              hidden: true,
+            };
+          })
+        );
         setLoading(false);
       } catch (error) {
         alert("Error to fetch a data :(");
@@ -72,6 +78,7 @@ function App() {
   return (
     <AppContext.Provider
       value={{
+        closeCards,
         cardsData,
         hiddenCardsState,
         setHiddenCardsState,
@@ -81,7 +88,7 @@ function App() {
       <Burger />
       <Container>
         <Routes>
-          <Route path="/" element={<Homepage />} />
+          <Route path="/" element={<Homepage cardsData={cardsData} />} />
           <Route
             path="/article/:id"
             element={<Article cardsData={cardsData} />}
@@ -95,6 +102,6 @@ function App() {
       </Container>
     </AppContext.Provider>
   );
-}
+};
 
 export default App;
