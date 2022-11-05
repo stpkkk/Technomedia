@@ -1,3 +1,4 @@
+import React from "react";
 import Homepage from "./Homepage";
 import Player from "../components/Player";
 import { Link } from "react-router-dom";
@@ -6,15 +7,10 @@ import {
   SplitPageLeft,
   SplitPageRight,
 } from "../styles/elements/SplitPage.style";
-import {
-  Header,
-  Line,
-  PageStyles,
-  Text,
-} from "../styles/PageStyles.style";
+import { Header, Line, StyledPage, Text } from "../styles/StyledPage.style";
 import { FlexContainer } from "../styles/elements/FlexContainer.style";
 
-const Media = ({ cardsData }) => {
+const Media: React.FC = ({ cardsData }) => {
   return (
     <>
       <Link to="/">
@@ -25,7 +21,7 @@ const Media = ({ cardsData }) => {
         if (item.id === 2) {
           return (
             <SplitPageLeft key={item.id}>
-              <PageStyles margin="44px 21px" color="#272727">
+              <StyledPage margin="44px 21px" color="#272727">
                 <Header>{item.page.title}</Header>
                 <Text maxWidth="582px" lineHeight="120%" margin="10px 0 0 0">
                   {item.page.text}
@@ -34,7 +30,7 @@ const Media = ({ cardsData }) => {
                 <FlexContainer maxWidth="692px">
                   <Player item={item} />
                 </FlexContainer>
-              </PageStyles>
+              </StyledPage>
             </SplitPageLeft>
           );
         }

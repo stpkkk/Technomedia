@@ -1,6 +1,10 @@
 import React from "react";
 
-const CardsSvg = ({ fill }) => {
+interface CardsScg {
+  fill: string;
+}
+
+const CardsSvg: React.FC<CardsScg> = ({ fill }) => {
   return (
     <div>
       <svg

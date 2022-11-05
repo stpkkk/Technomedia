@@ -3,26 +3,30 @@ import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import {
   CardStoriesStyles,
-  SlideTitle,
+  StyledStoryTitle,
 } from "../../styles/cards/CardStoriesStyles.style";
 import Stories, { WithSeeMore } from "react-insta-stories";
 import AppContext from "../../context/context";
+import { ICardsItem, IStory } from "../../@types/cards";
 
-const CardStories = ({ cardsItem }) => {
+interface IProps {
+  cardsItem: ICardsItem;
+}
+
+const CardStories: React.FC<IProps> = ({ cardsItem }) => {
   const [currentId, setCurrentId] = useState(0);
 
   const { closeCards }: any = useContext(AppContext);
-
-  const stories = cardsItem.slider.map((slide, index: number) => ({
+  const stories = cardsItem.stories.map((storiesItem: IStory, index: number) => ({
     content: ({ action, story }) => {
       return (
         <CardStoriesStyles
           key={index}
-          //   backgroundImg={require("../../assets/img/" + slide.image + ".png")}
+          //   backgroundImg={require("../../assets/img/" + story.image + ".png")}
         >
           <WithSeeMore story={story} action={action}>
             <img
-              src={require("../../assets/img/" + slide.image + ".png")}
+              src={require("../../assets/img/" + storiesItem.image + ".png")}
               alt={"article-card"}
             />
           </WithSeeMore>
@@ -32,12 +36,12 @@ const CardStories = ({ cardsItem }) => {
 
     seeMore: () => <p>Something goes wrong</p>,
     seeMoreCollapsed: ({ action }) => (
-      <SlideTitle>
+      <StyledStoryTitle>
         <Link to={`${cardsItem.pathName}/${cardsItem.id}`}>
-          <h3>{slide.slideTitle}</h3>
-          <p>{slide.slideDescription}</p>
+          <h3>{storiesItem.storyTitle}</h3>
+          <p>{storiesItem.storyDescription}</p>
         </Link>
-      </SlideTitle>
+      </StyledStoryTitle>
     ),
   }));
 

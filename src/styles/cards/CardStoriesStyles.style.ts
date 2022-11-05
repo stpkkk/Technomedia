@@ -19,7 +19,7 @@ export const CardStoriesStyles = styled.div`
   }
 `;
 
-export const SlideTitle = styled.div`
+export const StyledStoryTitle = styled.div`
   position: absolute;
   bottom: 58px;
   left: 20px;
@@ -42,4 +42,3 @@ export const SlideTitle = styled.div`
   }
 `;
 
-export const SlideDescription = styled.div``;

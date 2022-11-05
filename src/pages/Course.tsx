@@ -1,3 +1,4 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import Homepage from "./Homepage";
 import {
@@ -5,7 +6,7 @@ import {
   SplitPageRight,
 } from "../styles/elements/SplitPage.style";
 import {
-  PageStyles,
+  StyledPage,
   Header,
   Text,
   Image,
@@ -13,9 +14,9 @@ import {
   Line,
   InfoItem,
   Span,
-} from "../styles/PageStyles.style";
+} from "../styles/StyledPage.style";
 
-const Course = ({ cardsData }) => {
+const Course: React.FC = ({ cardsData }) => {
   return (
     <>
       <Link to="/">
@@ -26,7 +27,7 @@ const Course = ({ cardsData }) => {
         if (item.id === 1) {
           return (
             <SplitPageLeft key={item.id}>
-              <PageStyles margin="44px 21px" color="#272727">
+              <StyledPage margin="44px 21px" color="#272727">
                 <Header maxWidth="40%">{item.page.title}</Header>
                 <Image
                   maxWidth="689px"
@@ -56,7 +57,7 @@ const Course = ({ cardsData }) => {
                 </Info>
                 <Line margin="114px 0 18px 0" />
                 <Span>Список уроков</Span>
-              </PageStyles>
+              </StyledPage>
             </SplitPageLeft>
           );
         }

@@ -1,27 +1,28 @@
-
-
 export interface ICardsData {
-  item: {
-    id: any;
-    name: string;
-    svgColor: string;
-  };
-  isHidden: boolean;
-  handleClick: React.MouseEventHandler<HTMLButtonElement>;
-  map(
-    arg0: (item: { id: number; hidden: boolean }) => {
-      id: number;
-      hidden: boolean;
-    }
-  ): import("react").SetStateAction<ICardsData>;
+  id: number;
+  name: string;
+  pathName: string;
+  svgColor: string;
+  image: string;
+  hidden: boolean;
+  stories: [];
+  page: [];
 }
 
-export type CardsContextType = {
-  cardsData: ICardsData[];
-};
+// export type CardsContextType = {
+//   cardsData: ICardsData[];
+// };
 
-export type CardsItemType = {
-	id: any;
-    name: string;
-    svgColor: string;
+export interface ICardsItem {
+  stories: [];
+  id: any;
+  name: string;
+  svgColor: string;
+  pathName: string;
+  image: any;
+}
+export interface IStory {
+  image: string;
+  storyTitle: string;
+  storyDescription: string;
 }

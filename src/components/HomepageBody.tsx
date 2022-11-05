@@ -1,8 +1,9 @@
-import { PageStyles, Text } from "../styles/PageStyles.style";
+import React from "react";
+import { StyledPage, Text } from "../styles/StyledPage.style";
 
-const HomepageBody = () => {
+const HomepageBody: React.FC = () => {
   return (
-    <PageStyles margin="39.24px 20px" color="#e5e5e5">
+    <StyledPage margin="39.24px 20px" color="#e5e5e5">
       <Text
         maxWidth="1080px"
         paddingBottom="50px"
@@ -33,7 +34,7 @@ const HomepageBody = () => {
           Занимайтесь в комфортном темпе.
         </p>
       </Text>
-    </PageStyles>
+    </StyledPage>
   );
 };
 

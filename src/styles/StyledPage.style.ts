@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-type Props = {
+interface IStyleProps {
   margin: string;
   paddingBottom: string;
   maxWidth: string;
@@ -10,9 +10,9 @@ type Props = {
   lineHeight: string;
   letterSpacing: string;
   minHeight: string;
-};
+}
 
-export const PageStyles = styled.div<Props>`
+export const StyledPage = styled.div<IStyleProps>`
   margin: ${(props) => props.margin};
   color: ${(props) => props.color};
   font-size: 16px;
@@ -31,7 +31,7 @@ export const PageStyles = styled.div<Props>`
   }
 `;
 
-export const Span = styled.span<Props>`
+export const Span = styled.span<IStyleProps>`
   padding-bottom: ${(props) => props.paddingBottom};
   color: #959595;
   font-size: 12px;
@@ -39,7 +39,7 @@ export const Span = styled.span<Props>`
   display: block;
 `;
 
-export const Image = styled.img<Props>`
+export const Image = styled.img<IStyleProps>`
   max-width: ${(props) => props.maxWidth};
   min-width: ${(props) => props.minWidth};
   margin: ${(props) => props.margin};
@@ -64,7 +64,7 @@ export const InfoItem = styled.div`
   line-height: 127%;
 `;
 
-export const Text = styled.div<Props>`
+export const Text = styled.div<IStyleProps>`
   max-width: ${(props) => props.maxWidth};
   min-height: ${(props) => props.minHeight};
   margin: ${(props) => props.margin};
@@ -75,11 +75,11 @@ export const Text = styled.div<Props>`
   letter-spacing: ${(props) => props.letterSpacing};
 `;
 
-export const Header = styled.h1<Props>`
+export const Header = styled.h1<IStyleProps>`
   max-width: ${(props) => props.maxWidth};
 `;
 
-export const Line = styled.div<Props>`
+export const Line = styled.div<IStyleProps>`
   max-width: 692px;
   border-bottom: solid 1px #b5b5b5;
   margin: ${(props) => props.margin};

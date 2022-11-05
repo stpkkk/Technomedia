@@ -7,26 +7,26 @@
       "svgColor": "#F5F879",
       "image": "article-card",
       "hidden": true,
-      "slider": [
+      "stories": [
         {
           "image": "article-card",
-          "slideTitle": "Как научиться вставать пораньше - 1",
-          "slideDescription": "И чувствовать себя бодро весь день - 1"
+          "storyTitle": "Как научиться вставать пораньше - 1",
+          "storyDescription": "И чувствовать себя бодро весь день - 1"
         },
         {
           "image": "course-card",
-          "slideTitle": "Как научиться вставать пораньше - 2",
-          "slideDescription": "И чувствовать себя бодро весь день - 2"
+          "storyTitle": "Как научиться вставать пораньше - 2",
+          "storyDescription": "И чувствовать себя бодро весь день - 2"
         },
         {
           "image": "media-card",
-          "slideTitle": "Как научиться вставать пораньше - 3",
-          "slideDescription": "И чувствовать себя бодро весь день - 3"
+          "storyTitle": "Как научиться вставать пораньше - 3",
+          "storyDescription": "И чувствовать себя бодро весь день - 3"
         },
         {
           "image": "course-card",
-          "slideTitle": "Как научиться вставать пораньше - 4",
-          "slideDescription": "И чувствовать себя бодро весь день - 4"
+          "storyTitle": "Как научиться вставать пораньше - 4",
+          "storyDescription": "И чувствовать себя бодро весь день - 4"
         }
       ],
 
@@ -48,26 +48,26 @@
       "svgColor": "#42A2D9",
       "image": "course-card",
       "hidden": true,
-      "slider": [
+      "stories": [
         {
           "image": "article-card",
-          "slideTitle": "Как восстанавливаться не выезжая из города - 1",
-          "slideDescription": "Простые упражнения для полного восстановления сил - 1"
+          "storyTitle": "Как восстанавливаться не выезжая из города - 1",
+          "storyDescription": "Простые упражнения для полного восстановления сил - 1"
         },
         {
           "image": "course-card",
-          "slideTitle": "Как восстанавливаться не выезжая из города - 2",
-          "slideDescription": "Простые упражнения для полного восстановления сил - 2 "
+          "storyTitle": "Как восстанавливаться не выезжая из города - 2",
+          "storyDescription": "Простые упражнения для полного восстановления сил - 2 "
         },
         {
           "image": "media-card",
-          "slideTitle": "Как восстанавливаться не выезжая из города - 3",
-          "slideDescription": "Простые упражнения для полного восстановления сил - 3"
+          "storyTitle": "Как восстанавливаться не выезжая из города - 3",
+          "storyDescription": "Простые упражнения для полного восстановления сил - 3"
         },
         {
           "image": "course-card",
-          "slideTitle": "Как восстанавливаться не выезжая из города - 4",
-          "slideDescription": "Простые упражнения для полного восстановления сил - 4"
+          "storyTitle": "Как восстанавливаться не выезжая из города - 4",
+          "storyDescription": "Простые упражнения для полного восстановления сил - 4"
         }
       ],
 
@@ -86,26 +86,26 @@
       "svgColor": "#42D963",
       "image": "media-card",
       "hidden": true,
-      "slider": [
+      "stories": [
         {
           "image": "article-card",
-          "slideTitle": "Начните медитировать уже сейчас - 1",
-          "slideDescription": "6 медитаций на каждый день - 1"
+          "storyTitle": "Начните медитировать уже сейчас - 1",
+          "storyDescription": "6 медитаций на каждый день - 1"
         },
         {
           "image": "course-card",
-          "slideTitle": "Начните медитировать уже сейчас - 2",
-          "slideDescription": "6 медитаций на каждый день - 2 "
+          "storyTitle": "Начните медитировать уже сейчас - 2",
+          "storyDescription": "6 медитаций на каждый день - 2 "
         },
         {
           "image": "media-card",
-          "slideTitle": "Начните медитировать уже сейчас - 3",
-          "slideDescription": "6 медитаций на каждый день - 3"
+          "storyTitle": "Начните медитировать уже сейчас - 3",
+          "storyDescription": "6 медитаций на каждый день - 3"
         },
         {
           "image": "course-card",
-          "slideTitle": "Начните медитировать уже сейчас - 4",
-          "slideDescription": "6 медитаций на каждый день - 4"
+          "storyTitle": "Начните медитировать уже сейчас - 4",
+          "storyDescription": "6 медитаций на каждый день - 4"
         }
       ],
 

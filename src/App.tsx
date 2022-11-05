@@ -2,7 +2,7 @@
 //TODO TS
 // Cards
 //  JSON
-//TODO Link Sliders
+// Link Sliders
 //TODO anime
 // audio
 //TODO how to dwnld img frm figma(size)
@@ -15,6 +15,7 @@
 // wrap columns info
 //TODO player button
 //TODO Loader
+//TODO TS handleClick
 
 import React, { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";

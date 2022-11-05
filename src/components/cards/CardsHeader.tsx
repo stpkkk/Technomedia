@@ -1,9 +1,17 @@
 import React from "react";
 import { CardsHeaderStyles } from "../../styles/cards/CardsHeader.style";
 import CardsSvg from "./CardsSvg";
-import { ICardsHeader } from "../../@types/cards";
+import { ICardsItem } from "./../../@types/cards.d";
 
-const CardsHeader: React.FC<ICardsHeader> = ({ cardsItem, handleClick }) => {
+interface ICardsHeaderProps {
+  cardsItem: ICardsItem;
+  handleClick: any;
+}
+
+const CardsHeader: React.FC<ICardsHeaderProps> = ({
+  cardsItem,
+  handleClick,
+}) => {
   return (
     <div>
       <CardsHeaderStyles

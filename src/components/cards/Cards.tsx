@@ -3,8 +3,7 @@ import { CardsContainer } from "../../styles/cards/CardsContainer.style";
 import Card from "./Card";
 import AppContext from "../../context/context";
 import "../../styles/styletest.scss";
-
-// import { ICardsData } from "../../@types/cards";
+import { ICardsItem } from "../../@types/cards";
 
 const Cards: React.FC = () => {
   const { cardsData, setHiddenCardsState, hiddenCardsState }: any =
@@ -27,21 +26,16 @@ const Cards: React.FC = () => {
   return (
     <CardsContainer>
       <ul>
-        {cardsData.map(
-          (
-            item: { id: any; name: string; svgColor: string },
-            index: number
-          ) => {
-            return (
-              <Card
-                key={index}
-                isHidden={hiddenCardsState[index].hidden}
-                cardsItem={item}
-                handleClick={handleClick}
-              />
-            );
-          }
-        )}
+        {cardsData.map((item: ICardsItem, index: number) => {
+          return (
+            <Card
+              key={index}
+              isHidden={hiddenCardsState[index].hidden}
+              cardsItem={item}
+              handleClick={handleClick}
+            />
+          );
+        })}
       </ul>
     </CardsContainer>
   );
