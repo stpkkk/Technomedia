@@ -1,26 +1,10 @@
-//TODO css main section p div h123 span...
+//TODO ON TS lint
 //TODO TS
-// Cards
-//  JSON
-//TODO Link Sliders
-//TODO anime
-// audio
-//TODO how to dwnld img frm figma(size)
-//TODO rename img
-//init font size
-// word wrap text
-// adaptive pages
-//TODO app structure
-//TODO pathname pages
-// wrap columns info
-//TODO player button
-//TODO Loader
-//TODO TS handleClick
-//TODO on TS
-
+//TODO custom boards
+//TODO pages data
+//TODO page animation
 import React, { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
-
 import Loader from "./styles/elements/Loader.style";
 import Burger from "./components/Burger";
 import Homepage from "./pages/Homepage";
@@ -31,8 +15,6 @@ import AppContext from "./context/context";
 
 import { GlobalStyles, Container } from "./styles/GlobalStyles.style";
 import { ICardsData } from "./@types/cards";
-
-
 
 const App: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(false);
@@ -92,16 +74,13 @@ const App: React.FC = () => {
       <Burger />
       <Container>
         <Routes>
-          <Route path="/" element={<Homepage id={0} hidden={false}/>} />
           <Route
-            path="/article/:id"
-            element={<Article/>}
+            path="/"
+            element={<Homepage id={0} hidden={false} onClick={closeCards} />}
           />
-          <Route
-            path="/course/:id"
-            element={<Course/>}
-          />
-          <Route path="/media/:id" element={<Media/>} />
+          <Route path="/article/:id" element={<Article />} />
+          <Route path="/course/:id" element={<Course />} />
+          <Route path="/media/:id" element={<Media />} />
         </Routes>
       </Container>
     </AppContext.Provider>

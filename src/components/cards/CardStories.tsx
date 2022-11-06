@@ -21,10 +21,7 @@ const CardStories: React.FC<IProps> = ({ cardsItem }) => {
     (storiesItem: IStory, index: number) => ({
       content: ({ action, story }: any) => {
         return (
-          <StyledCardStories
-            key={index}
-            //   backgroundImg={require("../../assets/img/" + story.image + ".png")}
-          >
+          <StyledCardStories key={index}>
             <WithSeeMore story={story} action={action}>
               <img
                 src={require("../../assets/img/" + storiesItem.image + ".png")}
@@ -52,12 +49,11 @@ const CardStories: React.FC<IProps> = ({ cardsItem }) => {
       <Stories
         key={cardsItem.id}
         width={456}
-        height={675}
+        height={674}
         currentIndex={currentId}
         keyboardNavigation
         defaultInterval={5000}
         stories={stories}
-        loop={false}
         storyContainerStyles={{
           color: "red",
           background: " #333333",

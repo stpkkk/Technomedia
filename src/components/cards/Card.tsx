@@ -11,7 +11,7 @@ interface IProps {
 
 const Card: React.FC<IProps> = ({ cardsItem, isHidden, handleClick }) => {
   return (
-    <li className={isHidden ? "card-open" : "card"}>
+    <li className={isHidden ? "card-close" : "card-open"}>
       <CardsHeader cardsItem={cardsItem} handleClick={handleClick} />
       {!isHidden && <CardStories cardsItem={cardsItem}/>}
     </li>

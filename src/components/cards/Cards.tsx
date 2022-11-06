@@ -2,12 +2,11 @@ import React, { useContext } from "react";
 import { StyledCardsContainer } from "../../styles/cards/StyledCardsContainer.style";
 import Card from "./Card";
 import AppContext from "../../context/context";
-import "../../styles/styletest.scss";
 import { ICardsItem } from "../../@types/cards";
 
 const Cards: React.FC = () => {
   const { cardsData, setHiddenCardsState, hiddenCardsState }: any =
-    useContext(AppContext); //😞
+    useContext(AppContext);
 
   //open and close cards
   const handleClick: (id: number) => void = (id: number) => {
@@ -24,7 +23,7 @@ const Cards: React.FC = () => {
   };
 
   return (
-    <StyledCardsContainer>
+    <StyledCardsContainer >
       <ul>
         {cardsData.map((item: ICardsItem, index: number) => {
           return (

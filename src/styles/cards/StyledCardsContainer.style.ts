@@ -10,8 +10,6 @@ export const StyledCardsContainer = styled.div`
     display: flex;
     margin: 0 20px 0 20px;
     align-items: flex-end;
-	top: 10px;
-
 
     li {
       list-style: none;
@@ -22,12 +20,12 @@ export const StyledCardsContainer = styled.div`
       height: 53px;
     }
 
-    .card {
+    .card-open {
       height: 728px;
       transition: height 2s ease-out;
     }
 
-    .card-open {
+    .card-close {
       transition: height 2s ease-out;
     }
 

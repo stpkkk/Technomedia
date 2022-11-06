@@ -2,40 +2,32 @@ import styled from "styled-components";
 
 const Loader = styled.div`
   position: relative;
-  left: 50%;
-  margin-top: 20%;
-  width: 100px;
+  display: block;
+  background-color: #000;
+  width: 100%;
   height: 100px;
+  display: inline-block;
+  background: linear-gradient(
+      45deg,
+      #000 25%,
+      transparent 25%,
+      transparent 75%,
+      #000 75%,
+      #000 100%
+    ),
+    linear-gradient(45deg, #000 25%, white 25%, white 75%, #000 75%, #000 100%);
+  font-size: 10px;
+  background-size: 32px 32px;
+  box-sizing: border-box;
+  animation: raceBoard 0.6s linear infinite;
+  background-position: 0 0, 16px 16px;
 
-  :before,
-  :after {
-    content: "";
-    position: absolute;
-    border-radius: 50%;
-    inset: 0;
-    background: radial-gradient(circle 10px, rgb(125, 206, 139) 94%, #0000),
-      repeating-conic-gradient(
-        from -30deg,
-        #0000 0 60deg,
-        rgb(125, 206, 139) 61deg 120deg
-      );
-    -webkit-mask: radial-gradient(
-      circle 15px,
-      #000 calc(100% - 6px),
-      #0000 calc(100% - 5px) 94%,
-      #000
-    );
-  }
-
-  :after {
-    animation: pl4 1s infinite;
-    transform: perspective(300px) translateZ(0px);
-  }
-
-  @keyframes pl4 {
-    to {
-      transform: perspective(300px) translateZ(150px);
-      opacity: 0;
+  @keyframes raceBoard {
+    0% {
+      background-position: 0 0, 16px 16px;
+    }
+    100% {
+      background-position: 32px 0px, 48px 16px;
     }
   }
 `;

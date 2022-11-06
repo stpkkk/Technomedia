@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { StyledPage, Text } from "../styles/StyledPage.style";
 
+import AppContext from "../context/context";
 const HomepageBody: React.FC = () => {
+  const { closeCards }: any = useContext(AppContext);
   return (
-    <StyledPage margin="39.24px 20px" color="#e5e5e5">
+    <StyledPage margin="39.24px 20px" color="#e5e5e5" onClick={closeCards}>
       <Text
         maxWidth="1080px"
         paddingBottom="50px"

@@ -15,7 +15,6 @@ interface IStyleProps {
   display?:string;
 }
 
-
 export const StyledPage = styled.div<IStyleProps>`
   margin: ${(props) => props.margin};
   color: ${(props) => props.color};
