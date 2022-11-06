@@ -1,5 +1,4 @@
-import styled from "styled-components";
-import { createGlobalStyle } from "styled-components";
+import styled,{ createGlobalStyle } from "styled-components";
 import SuisseIntlRegular from "../assets/fonts/SuisseIntl/SuisseIntlRegular.otf";
 
 export const GlobalStyles = createGlobalStyle`
@@ -30,8 +29,8 @@ html {
 
 body {
   margin: 0;
-  background-color: #272727;
-  color: #e5e5e5;
+  background-color:  #FFFFFF;
+  color:#272727;
   font-family: "Suisse Int'l Regular","Gill Sans",  sans-serif;
   font-style: normal;
   font-size: 16px;

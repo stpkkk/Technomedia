@@ -1,21 +1,6 @@
 import styled from "styled-components";
 
-interface IStyleProps {
-  margin?: string;
-  paddingBottom?: string;
-  maxWidth?: string;
-  minWidth?: string;
-  borderRadius?: string;
-  fontSize?: string;
-  lineHeight?: string;
-  letterSpacing?: string;
-  minHeight?: string;
-  color?: string;
-  height?: string;
-  display?:string;
-}
-
-export const StyledPage = styled.div<IStyleProps>`
+export const StyledPage = styled.div`
   margin: ${(props) => props.margin};
   color: ${(props) => props.color};
   font-size: 16px;
@@ -34,7 +19,7 @@ export const StyledPage = styled.div<IStyleProps>`
   }
 `;
 
-export const Span = styled("span")<IStyleProps>`
+export const Span = styled("span")`
   padding-bottom: ${(props) => props.paddingBottom};
   color: #959595;
   font-size: 12px;
@@ -42,7 +27,7 @@ export const Span = styled("span")<IStyleProps>`
   display: block;
 `;
 
-export const Image = styled.img<IStyleProps>`
+export const Image = styled.img`
   max-width: ${(props) => props.maxWidth};
   min-width: ${(props) => props.minWidth};
   margin: ${(props) => props.margin};
@@ -59,6 +44,7 @@ export const Info = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
+  color: #272727;
 `;
 
 export const InfoItem = styled.div`
@@ -67,7 +53,7 @@ export const InfoItem = styled.div`
   line-height: 127%;
 `;
 
-export const Text = styled.div<IStyleProps>`
+export const Text = styled.div`
   max-width: ${(props) => props.maxWidth};
   min-height: ${(props) => props.minHeight};
   margin: ${(props) => props.margin};
@@ -78,11 +64,11 @@ export const Text = styled.div<IStyleProps>`
   letter-spacing: ${(props) => props.letterSpacing};
 `;
 
-export const Header = styled.h1<IStyleProps>`
+export const Header = styled.h1`
   max-width: ${(props) => props.maxWidth};
 `;
 
-export const Line = styled.div<IStyleProps>`
+export const Line = styled.div`
   max-width: 692px;
   border-bottom: solid 1px #b5b5b5;
   margin: ${(props) => props.margin};

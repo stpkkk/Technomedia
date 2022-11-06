@@ -1,13 +1,8 @@
-import React from "react";
+//components
 import HomepageBody from "../components/HomepageBody";
 import Cards from "../components/cards/Cards";
 
-interface IHomepage {
-  id: number;
-  hidden: boolean;
-}
-
-const Homepage: React.FC<IHomepage> = () => {
+const Homepage = () => {
   return (
     <>
       <HomepageBody />

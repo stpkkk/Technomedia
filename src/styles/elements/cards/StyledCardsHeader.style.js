@@ -4,6 +4,7 @@ export const StyledCardsHeader = styled.div`
   text-transform: uppercase;
   cursor: pointer;
   padding: 0 10px 0 10px;
+  color: #FFFFFF;
 
   div {
 

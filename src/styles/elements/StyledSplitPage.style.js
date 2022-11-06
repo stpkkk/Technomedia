@@ -17,11 +17,7 @@ export const SplitPageRight = styled.div`
   right: 0;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
-  overflow: hidden; //анимация корзины, чтобы не было скролла
-
   position: fixed;
   height: 100%;
-  opacity: 1; //анимация корзины
-
   cursor: pointer;
 `;

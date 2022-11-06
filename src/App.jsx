@@ -1,9 +1,8 @@
 //TODO ON TS lint
 //TODO TS
 //TODO custom boards
-//TODO pages data
 //TODO page animation
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Loader from "./styles/elements/Loader.style";
 import Burger from "./components/Burger";
@@ -14,12 +13,11 @@ import Media from "./pages/Media";
 import AppContext from "./context/context";
 
 import { GlobalStyles, Container } from "./styles/GlobalStyles.style";
-import { ICardsData } from "./@types/cards";
 
-const App: React.FC = () => {
-  const [loading, setLoading] = useState<boolean>(false);
-  const [cardsData, setCardsData] = useState<ICardsData[]>([]);
-  const [hiddenCardsState, setHiddenCardsState] = useState<ICardsData[]>([]);
+const App = () => {
+  const [loading, setLoading] = useState(false);
+  const [cardsData, setCardsData] = useState([]);
+  const [hiddenCardsState, setHiddenCardsState] = useState([]);
 
   const closeCards = () => {
     setHiddenCardsState(
@@ -39,7 +37,7 @@ const App: React.FC = () => {
         const jsonData = await res.json();
         setCardsData(jsonData);
         setHiddenCardsState(
-          jsonData.map((item: { id: number }) => {
+          jsonData.map((item) => {
             return {
               id: item.id,
               hidden: true,
@@ -78,9 +76,9 @@ const App: React.FC = () => {
             path="/"
             element={<Homepage id={0} hidden={false} onClick={closeCards} />}
           />
-          <Route path="/article/:id" element={<Article />} />
-          <Route path="/course/:id" element={<Course />} />
-          <Route path="/media/:id" element={<Media />} />
+          <Route path="/article/:id/:storyId" element={<Article />} />
+          <Route path="/course/:id/:storyId" element={<Course />} />
+          <Route path="/media/:id/:storyId" element={<Media />} />
         </Routes>
       </Container>
     </AppContext.Provider>

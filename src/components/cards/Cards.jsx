@@ -1,17 +1,18 @@
-import React, { useContext } from "react";
-import { StyledCardsContainer } from "../../styles/cards/StyledCardsContainer.style";
-import Card from "./Card";
+import { useContext } from "react";
 import AppContext from "../../context/context";
-import { ICardsItem } from "../../@types/cards";
+//components
+import Card from "./Card";
+//styles
+import { StyledCardsContainer } from "../../styles/elements/cards/StyledCardsContainer.style";
 
-const Cards: React.FC = () => {
-  const { cardsData, setHiddenCardsState, hiddenCardsState }: any =
+const Cards = () => {
+  const { cardsData, setHiddenCardsState, hiddenCardsState } =
     useContext(AppContext);
 
   //open and close cards
-  const handleClick: (id: number) => void = (id: number) => {
+  const handleClick = (id) => {
     setHiddenCardsState(
-      hiddenCardsState.map((item: { id: number; hidden: boolean }) => {
+      hiddenCardsState.map((item) => {
         if (item.id === id) {
           item.hidden = !item.hidden;
         } else {
@@ -23,9 +24,9 @@ const Cards: React.FC = () => {
   };
 
   return (
-    <StyledCardsContainer >
+    <StyledCardsContainer>
       <ul>
-        {cardsData.map((item: ICardsItem, index: number) => {
+        {cardsData.map((item, index) => {
           return (
             <Card
               key={index}
