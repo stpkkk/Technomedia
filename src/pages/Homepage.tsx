@@ -1,15 +1,17 @@
-import React, { useContext } from "react";
+import React from "react";
 import HomepageBody from "../components/HomepageBody";
 import Cards from "../components/cards/Cards";
-import { ICardsData } from "../@types/cards";
-import AppContext from "../context/context";
 
-const Homepage: React.FC = () => {
-  const { cardsData }: any = useContext(AppContext);
+interface IHomepage {
+  id: number;
+  hidden: boolean;
+}
+
+const Homepage: React.FC<IHomepage> = () => {
   return (
     <>
       <HomepageBody />
-      <Cards cardsData={cardsData} />
+      <Cards />
     </>
   );
 };

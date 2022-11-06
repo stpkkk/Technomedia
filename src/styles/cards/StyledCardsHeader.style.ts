@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const CardsHeaderStyles = styled.div`
+export const StyledCardsHeader = styled.div`
   text-transform: uppercase;
   cursor: pointer;
   padding: 0 10px 0 10px;

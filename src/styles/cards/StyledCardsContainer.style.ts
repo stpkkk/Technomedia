@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const CardsContainer = styled.div`
+export const StyledCardsContainer = styled.div`
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -10,6 +10,8 @@ export const CardsContainer = styled.div`
     display: flex;
     margin: 0 20px 0 20px;
     align-items: flex-end;
+	top: 10px;
+
 
     li {
       list-style: none;
@@ -17,9 +19,16 @@ export const CardsContainer = styled.div`
       background: #333333;
       border-radius: 8px 8px 0px 0px;
       margin-right: 16px;
-      /* transform: translateY(100%);
-      transition: transform 5s ease-out;
-      color: #000; */
+      height: 53px;
+    }
+
+    .card {
+      height: 728px;
+      transition: height 2s ease-out;
+    }
+
+    .card-open {
+      transition: height 2s ease-out;
     }
 
     li:last-child {

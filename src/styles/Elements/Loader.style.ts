@@ -1,12 +1,9 @@
 import styled from "styled-components";
 
 const Loader = styled.div`
-  width: 60px;
-  height: 60px;
   position: relative;
   left: 50%;
-  margin-top: 30%;
-  margin-left: -50px;
+  margin-top: 20%;
   width: 100px;
   height: 100px;
 

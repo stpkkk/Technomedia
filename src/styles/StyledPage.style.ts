@@ -1,16 +1,20 @@
 import styled from "styled-components";
 
 interface IStyleProps {
-  margin: string;
-  paddingBottom: string;
-  maxWidth: string;
-  minWidth: string;
-  borderRadius: string;
-  fontSize: string;
-  lineHeight: string;
-  letterSpacing: string;
-  minHeight: string;
+  margin?: string;
+  paddingBottom?: string;
+  maxWidth?: string;
+  minWidth?: string;
+  borderRadius?: string;
+  fontSize?: string;
+  lineHeight?: string;
+  letterSpacing?: string;
+  minHeight?: string;
+  color?: string;
+  height?: string;
+  display?:string;
 }
+
 
 export const StyledPage = styled.div<IStyleProps>`
   margin: ${(props) => props.margin};
@@ -31,7 +35,7 @@ export const StyledPage = styled.div<IStyleProps>`
   }
 `;
 
-export const Span = styled.span<IStyleProps>`
+export const Span = styled("span")<IStyleProps>`
   padding-bottom: ${(props) => props.paddingBottom};
   color: #959595;
   font-size: 12px;

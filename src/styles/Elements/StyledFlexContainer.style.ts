@@ -4,7 +4,7 @@ type Props = {
   maxWidth: string;
 };
 
-export const FlexContainer = styled.div<Props>`
+export const StyledFlexContainer = styled.div<Props>`
   display: flex;
   justify-content: space-between;
   align-items: center;

@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { CardsContainer } from "../../styles/cards/CardsContainer.style";
+import { StyledCardsContainer } from "../../styles/cards/StyledCardsContainer.style";
 import Card from "./Card";
 import AppContext from "../../context/context";
 import "../../styles/styletest.scss";
@@ -10,7 +10,7 @@ const Cards: React.FC = () => {
     useContext(AppContext); //😞
 
   //open and close cards
-  const handleClick = (id: number) => {
+  const handleClick: (id: number) => void = (id: number) => {
     setHiddenCardsState(
       hiddenCardsState.map((item: { id: number; hidden: boolean }) => {
         if (item.id === id) {
@@ -24,7 +24,7 @@ const Cards: React.FC = () => {
   };
 
   return (
-    <CardsContainer>
+    <StyledCardsContainer>
       <ul>
         {cardsData.map((item: ICardsItem, index: number) => {
           return (
@@ -37,7 +37,7 @@ const Cards: React.FC = () => {
           );
         })}
       </ul>
-    </CardsContainer>
+    </StyledCardsContainer>
   );
 };
 

@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import Homepage from "./Homepage";
+import AppContext from "../context/context";
 
 import {
   SplitPageLeft,
   SplitPageRight,
-} from "../styles/elements/SplitPage.style";
+} from "../styles/elements/StyledSplitPage.style";
 import {
   StyledPage,
   Header,
@@ -17,14 +18,15 @@ import {
 } from "../styles/StyledPage.style";
 import { ICardsData } from "../@types/cards";
 
-const Article: React.FC = ({ cardsData }) => {
+const Article: React.FC = () => {
+  const { cardsData }: any = useContext(AppContext);
   return (
     <>
       <Link to="/">
         <SplitPageRight />
       </Link>
-      <Homepage  />
-      {cardsData.map((cardsItem) => {
+      <Homepage id={0} hidden={false} />
+      {cardsData.map((cardsItem: ICardsData) => {
         if (cardsItem.id === 0) {
           return (
             <SplitPageLeft key={cardsItem.id}>
@@ -46,7 +48,7 @@ const Article: React.FC = ({ cardsData }) => {
                   </InfoItem>
                   <div>
                     <InfoItem>
-                      <Span> Статья подготовлена при поддержке</Span>
+                      <Span>Статья подготовлена при поддержке</Span>
                       <a href="https://www.theabyss.com">
                         {cardsItem.page.support}
                       </a>

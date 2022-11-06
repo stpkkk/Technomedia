@@ -1,11 +1,11 @@
 import React from "react";
-import { CardsHeaderStyles } from "../../styles/cards/CardsHeader.style";
+import { StyledCardsHeader } from "../../styles/cards/StyledCardsHeader.style";
 import CardsSvg from "./CardsSvg";
 import { ICardsItem } from "./../../@types/cards.d";
 
 interface ICardsHeaderProps {
   cardsItem: ICardsItem;
-  handleClick: any;
+  handleClick: (id: number) => void;
 }
 
 const CardsHeader: React.FC<ICardsHeaderProps> = ({
@@ -14,7 +14,7 @@ const CardsHeader: React.FC<ICardsHeaderProps> = ({
 }) => {
   return (
     <div>
-      <CardsHeaderStyles
+      <StyledCardsHeader
         onClick={() => {
           handleClick(cardsItem.id);
         }}
@@ -23,7 +23,7 @@ const CardsHeader: React.FC<ICardsHeaderProps> = ({
           <span>{cardsItem.name}</span>
           <CardsSvg fill={cardsItem.svgColor} />
         </div>
-      </CardsHeaderStyles>
+      </StyledCardsHeader>
     </div>
   );
 };

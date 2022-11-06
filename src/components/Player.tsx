@@ -3,21 +3,31 @@
 import React from "react";
 import AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/src/styles.scss";
-import { CustomPlayer } from "../styles/elements/CustomAudioPlayer.style";
+import { StyledPlayer } from "../styles/elements/StyledAudioPlayer.style";
 import cover from "../assets/img/article-card.png";
 
-const Player = ({ item }) => {
+// interface IPlayer {
+//   page: {
+//     title: string;
+//     text: string;
+//     audioTrack: {
+//       name: string;
+//       src: string;
+//     };
+//   };
+// }
+
+const Player: React.FC = ({ item }: any) => {
   return (
-    <CustomPlayer backgroundImg={cover}>
+    <StyledPlayer backgroundImg={cover}>
       <AudioPlayer
         src={item.page.audioTrack.src}
         onPlay={() => console.log("onPlay")}
         showJumpControls={false}
         customProgressBarSection={[]}
-        customControlsSection={["MAIN_CONTROLS"]} //delete to show control buttons
         autoPlayAfterSrcChange={false}
       />
-    </CustomPlayer>
+    </StyledPlayer>
   );
 };
 

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const CardStoriesStyles = styled.div`
+export const StyledCardStories = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
@@ -15,14 +15,13 @@ export const CardStoriesStyles = styled.div`
     position: relative;
     margin-top: 10px;
     width: 100%;
-    height: auto;
   }
 `;
 
 export const StyledStoryTitle = styled.div`
   position: absolute;
   bottom: 58px;
-  left: 20px;
+  margin-left: 20px;
   color: #ffffff;
   letter-spacing: -0.01em;
 
@@ -41,4 +40,3 @@ export const StyledStoryTitle = styled.div`
     max-width: 85%;
   }
 `;
-

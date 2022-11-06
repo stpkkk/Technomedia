@@ -6,12 +6,17 @@ export interface ICardsData {
   image: string;
   hidden: boolean;
   stories: [];
-  page: [];
+  page: {
+    title: string;
+    tag: string;
+    image: string;
+    support: string;
+    readTime: string;
+    subTitle: string;
+    subText: string;
+    text: string;
+  };
 }
-
-// export type CardsContextType = {
-//   cardsData: ICardsData[];
-// };
 
 export interface ICardsItem {
   stories: [];
@@ -21,8 +26,20 @@ export interface ICardsItem {
   pathName: string;
   image: any;
 }
+
 export interface IStory {
   image: string;
   storyTitle: string;
   storyDescription: string;
+}
+
+export interface IPage {
+  title: string;
+  tag: string;
+  image: string;
+  support: string;
+  readTime: string;
+  subTitle: string;
+  subText: string;
+  text: string;
 }

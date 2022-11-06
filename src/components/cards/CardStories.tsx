@@ -2,9 +2,9 @@
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import {
-  CardStoriesStyles,
+  StyledCardStories,
   StyledStoryTitle,
-} from "../../styles/cards/CardStoriesStyles.style";
+} from "../../styles/cards/StyledCardStories.style";
 import Stories, { WithSeeMore } from "react-insta-stories";
 import AppContext from "../../context/context";
 import { ICardsItem, IStory } from "../../@types/cards";
@@ -17,36 +17,38 @@ const CardStories: React.FC<IProps> = ({ cardsItem }) => {
   const [currentId, setCurrentId] = useState(0);
 
   const { closeCards }: any = useContext(AppContext);
-  const stories = cardsItem.stories.map((storiesItem: IStory, index: number) => ({
-    content: ({ action, story }) => {
-      return (
-        <CardStoriesStyles
-          key={index}
-          //   backgroundImg={require("../../assets/img/" + story.image + ".png")}
-        >
-          <WithSeeMore story={story} action={action}>
-            <img
-              src={require("../../assets/img/" + storiesItem.image + ".png")}
-              alt={"article-card"}
-            />
-          </WithSeeMore>
-        </CardStoriesStyles>
-      );
-    },
+  const stories = cardsItem.stories.map(
+    (storiesItem: IStory, index: number) => ({
+      content: ({ action, story }: any) => {
+        return (
+          <StyledCardStories
+            key={index}
+            //   backgroundImg={require("../../assets/img/" + story.image + ".png")}
+          >
+            <WithSeeMore story={story} action={action}>
+              <img
+                src={require("../../assets/img/" + storiesItem.image + ".png")}
+                alt={"article-card"}
+              />
+            </WithSeeMore>
+          </StyledCardStories>
+        );
+      },
 
-    seeMore: () => <p>Something goes wrong</p>,
-    seeMoreCollapsed: ({ action }) => (
-      <StyledStoryTitle>
-        <Link to={`${cardsItem.pathName}/${cardsItem.id}`}>
-          <h3>{storiesItem.storyTitle}</h3>
-          <p>{storiesItem.storyDescription}</p>
-        </Link>
-      </StyledStoryTitle>
-    ),
-  }));
+      seeMore: () => <p>Something goes wrong</p>,
+      seeMoreCollapsed: () => (
+        <StyledStoryTitle onClick={closeCards}>
+          <Link to={`${cardsItem.pathName}/${cardsItem.id}`}>
+            <h3>{storiesItem.storyTitle}</h3>
+            <p>{storiesItem.storyDescription}</p>
+          </Link>
+        </StyledStoryTitle>
+      ),
+    })
+  );
 
   return (
-    <CardStoriesStyles>
+    <StyledCardStories>
       <Stories
         key={cardsItem.id}
         width={456}
@@ -72,7 +74,7 @@ const CardStories: React.FC<IProps> = ({ cardsItem }) => {
           setCurrentId((currentId) => currentId + 1 - 1);
         }}
       />
-    </CardStoriesStyles>
+    </StyledCardStories>
   );
 };
 

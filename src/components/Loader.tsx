@@ -1,7 +1,7 @@
 import React from "react";
-import Loader from "../styles/elements/Loader.style";
+import Loader from "../styles/elements/Loader.style"
 
-const Loader = () => {
+const Loader:React.FC = () => {
   return <Loader></Loader>;
 };
 

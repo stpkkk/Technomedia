@@ -4,7 +4,7 @@ type Props = {
   backgroundImg: string;
 };
 
-export const CustomPlayer = styled.div<Props>`
+export const StyledPlayer = styled.div<Props>`
   background: url(${(props) => props.backgroundImg});
   width: 150px;
   height: 150px;

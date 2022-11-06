@@ -2,7 +2,7 @@
 //TODO TS
 // Cards
 //  JSON
-// Link Sliders
+//TODO Link Sliders
 //TODO anime
 // audio
 //TODO how to dwnld img frm figma(size)
@@ -16,6 +16,7 @@
 //TODO player button
 //TODO Loader
 //TODO TS handleClick
+//TODO on TS
 
 import React, { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
@@ -30,6 +31,8 @@ import AppContext from "./context/context";
 
 import { GlobalStyles, Container } from "./styles/GlobalStyles.style";
 import { ICardsData } from "./@types/cards";
+
+
 
 const App: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(false);
@@ -89,16 +92,16 @@ const App: React.FC = () => {
       <Burger />
       <Container>
         <Routes>
-          <Route path="/" element={<Homepage cardsData={cardsData} />} />
+          <Route path="/" element={<Homepage id={0} hidden={false}/>} />
           <Route
             path="/article/:id"
-            element={<Article cardsData={cardsData} />}
+            element={<Article/>}
           />
           <Route
             path="/course/:id"
-            element={<Course cardsData={cardsData} />}
+            element={<Course/>}
           />
-          <Route path="/media/:id" element={<Media cardsData={cardsData} />} />
+          <Route path="/media/:id" element={<Media/>} />
         </Routes>
       </Container>
     </AppContext.Provider>
