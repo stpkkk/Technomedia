@@ -1,4 +1,3 @@
-//components
 import CardsHeader from "./CardsHeader";
 import CardStories from "./CardStories";
 

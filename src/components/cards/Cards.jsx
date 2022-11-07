@@ -1,9 +1,8 @@
 import { useContext } from "react";
+
 import AppContext from "../../context/context";
-//components
-import Card from "./Card";
-//styles
 import { StyledCardsContainer } from "../../styles/elements/cards/StyledCardsContainer.style";
+import Card from "./Card";
 
 const Cards = () => {
   const { cardsData, setHiddenCardsState, hiddenCardsState } =

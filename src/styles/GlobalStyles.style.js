@@ -1,4 +1,5 @@
-import styled,{ createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
+
 import SuisseIntlRegular from "../assets/fonts/SuisseIntl/SuisseIntlRegular.otf";
 
 export const GlobalStyles = createGlobalStyle`

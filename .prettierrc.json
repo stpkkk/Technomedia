@@ -1,0 +1,9 @@
+{
+  "arrowParens": "always",
+  "useTabs": false,
+  "proseWrap": "always",
+  "bracketSpacing": true,
+  "semi": true,
+  "endOfLine": "auto",
+  "tabWidth": 2
+}

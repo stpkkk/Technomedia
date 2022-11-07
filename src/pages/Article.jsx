@@ -1,9 +1,8 @@
 import { useContext } from "react";
-import AppContext from "../context/context";
+
 import { Link, useParams } from "react-router-dom";
-//components
-import Homepage from "./Homepage";
-//styles
+
+import AppContext from "../context/context";
 import {
   SplitPageLeft,
   SplitPageRight,
@@ -17,12 +16,15 @@ import {
   Span,
   InfoItem,
 } from "../styles/StyledPage.style";
+import Homepage from "./Homepage";
+
 const Article = () => {
   const { cardsData } = useContext(AppContext);
 
   const { id, storyId } = useParams();
   const currentCard = cardsData.find((item) => item.id === id);
   const article = currentCard.pages.find((item) => item.id === storyId);
+
   return (
     <>
       <Link to="/">

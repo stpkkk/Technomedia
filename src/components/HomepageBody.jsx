@@ -1,6 +1,6 @@
 import { useContext } from "react";
+
 import AppContext from "../context/context";
-//styles
 import { StyledPage, Text } from "../styles/StyledPage.style";
 
 const HomepageBody = () => {

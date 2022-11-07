@@ -1,4 +1,3 @@
-//components
 import { StyledCardsHeader } from "../../styles/elements/cards/StyledCardsHeader.style";
 import CardsSvg from "./CardsSvg";
 

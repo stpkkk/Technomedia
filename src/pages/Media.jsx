@@ -1,22 +1,21 @@
 import { useContext } from "react";
-import AppContext from "../context/context";
+
 import { Link, useParams } from "react-router-dom";
-//components
-import Homepage from "./Homepage";
+
 import Player from "../components/Player";
-//styles
+import AppContext from "../context/context";
+import { StyledFlexContainer } from "../styles/elements/StyledFlexContainer.style";
 import {
   SplitPageLeft,
   SplitPageRight,
 } from "../styles/elements/StyledSplitPage.style";
 import { Header, Line, StyledPage, Text } from "../styles/StyledPage.style";
-import { StyledFlexContainer } from "../styles/elements/StyledFlexContainer.style";
+import Homepage from "./Homepage";
 
 const Media = () => {
   const { cardsData } = useContext(AppContext);
   const { id, storyId } = useParams();
   const currentCard = cardsData.find((item) => item.id === id);
-  console.log(cardsData);
   const media = currentCard.pages.find((item) => item.id === storyId);
 
   return (

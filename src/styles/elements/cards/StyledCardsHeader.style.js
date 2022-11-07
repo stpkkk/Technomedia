@@ -4,10 +4,9 @@ export const StyledCardsHeader = styled.div`
   text-transform: uppercase;
   cursor: pointer;
   padding: 0 10px 0 10px;
-  color: #FFFFFF;
+  color: #ffffff;
 
   div {
-
     display: flex;
     min-height: 53px;
     justify-content: space-between;

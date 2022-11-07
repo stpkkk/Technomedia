@@ -1,14 +1,14 @@
 //https://mohitk05.github.io/react-insta-stories/
 import { useState, useContext } from "react";
-import AppContext from "../../context/context";
+
+import Stories, { WithSeeMore } from "react-insta-stories";
 import { Link } from "react-router-dom";
-//styles
+
+import AppContext from "../../context/context";
 import {
   StyledCardStories,
   StyledStoryTitle,
 } from "../../styles/elements/cards/StyledCardStories.style";
-//react-insta-stories package
-import Stories, { WithSeeMore } from "react-insta-stories";
 
 const CardStories = ({ cardsItem }) => {
   const [currentId, setCurrentId] = useState(0);
@@ -58,7 +58,7 @@ const CardStories = ({ cardsItem }) => {
           setCurrentId((currentId) => currentId + 1);
         }}
         onAllStoriesEnd={() => {
-          setCurrentId((currentId) => 0);
+          setCurrentId(() => 0);
           closeCards();
         }}
         onStoryStart={() => {

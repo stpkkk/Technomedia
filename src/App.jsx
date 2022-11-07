@@ -1,17 +1,18 @@
-//TODO ON TS lint
 //TODO TS
-//TODO custom boards
+//TODO styled boards
 //TODO page animation
+
 import { useEffect, useState } from "react";
+
 import { Route, Routes } from "react-router-dom";
-import Loader from "./styles/elements/Loader.style";
+
 import Burger from "./components/Burger";
-import Homepage from "./pages/Homepage";
+import AppContext from "./context/context";
 import Article from "./pages/Article";
 import Course from "./pages/Course";
+import Homepage from "./pages/Homepage";
 import Media from "./pages/Media";
-import AppContext from "./context/context";
-
+import Loader from "./styles/elements/Loader.style";
 import { GlobalStyles, Container } from "./styles/GlobalStyles.style";
 
 const App = () => {
@@ -33,7 +34,6 @@ const App = () => {
       try {
         setLoading(true);
         const res = await fetch("http://localhost:5000/cardsDataBase");
-
         const jsonData = await res.json();
         setCardsData(jsonData);
         setHiddenCardsState(
@@ -47,6 +47,7 @@ const App = () => {
         setLoading(false);
       } catch (error) {
         alert("Error to fetch a data :(");
+        // eslint-disable-next-line no-console
         console.error(error);
         throw error;
       }
@@ -58,7 +59,6 @@ const App = () => {
   if (loading) {
     return <Loader />;
   }
-
   return (
     <AppContext.Provider
       value={{
