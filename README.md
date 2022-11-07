@@ -56,8 +56,8 @@
 </details>
 
 <div >
-<p>Prewie:</p>
-<img src="[https://github.com/stpkkk/cryptocurrency-react/blob/master/cryptovalery-prewie.png](https://github.com/stpkkk/Technomedia/blob/main/src/assets/img/app-structure.png)" alt="test">
+<p>Структура приложения:</p>
+<img src="https://github.com/stpkkk/Technomedia/blob/main/src/assets/img/app-structure.png" alt="test">
 </div>
 <div >
 
