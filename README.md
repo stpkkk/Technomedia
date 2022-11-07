@@ -1,6 +1,6 @@
 <div stl></div>
 <h2>Deploy: 
- comin soon...
+ coming soon...
 </h2>
 
 <details>
