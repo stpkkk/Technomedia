@@ -61,7 +61,7 @@
 </div>
  <div >
 <p>Превью:</p>
-<img srchttps://github.com/stpkkk/Technomedia/blob/main/src/assets/img/app-preview.png alt="test">
+<img src="https://github.com/stpkkk/Technomedia/blob/main/src/assets/img/app-preview.png alt="test">
 </div>
 <div >
 
