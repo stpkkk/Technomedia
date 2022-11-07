@@ -8,18 +8,17 @@
 <h2>About</h2>
 </summary>
 <div>
- <p>Cryptovalery - most-referenced price-tracking website for cryptoassets in the rapidly growing cryptocurrency space</p>
- <p>App developed with using coingeckoApi(https://www.coingecko.com/ru/api/documentation), coinRankingApi (https://rapidapi.com/Coinranking/api/coinranking1/) and bingNewsApi(https://rapidapi.com/microsoft-azure-org-microsoft-cognitive-services/api/bing-news-search1/)</p>
-<h2>Libraries were used</h2>
-<p>axios - HTTP-client</p>
-<p>sass - CSS preprocessor</p>
-<p>Ant-Design - CSS framework</p>
- <p>Chart.js - charts</p>
- <p>react-icons</p>
+ <p>Тестовое задание на должность Frontend-разработчика в компании Техномедия с использование фреймворка React.js, Styled Components, json-server, , react-insta-stories.
+
+Реализовано одностраничное веб-приложение с тремя карточками: статьи, курсы и медия, каждая карточка содержит сторисы, с ссылками на определенную статью, курс или медия.</p>
+<h2>Библиотеки которые использовались:</h2>
+<p>Styled Components</p>
+<p>json-serverr</p>
+<p>react-h5-audio-player</p>
+ <p>react-insta-stories</p>
+ <p>react-router-dom</p>
  <p>react-redux - state manager</p>
  <p>react-router-dom - declarative routing for React</p>
- <p>millify - converts long numbers into pretty, human-readable strings</p>
- <p>moment - for parsing, validating, manipulating, and formatting dates</p> 
 </div>
 <div>
 </div>
@@ -30,7 +29,7 @@
 </summary>
 
 <div>Install packages<div/>
-<div class="snippet-clipboard-content notranslate position-relative overflow-auto"><pre class="notranslate"><code>yarn install
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto"><pre class="notranslate"><code>npm install
 </code></pre><div class="zeroclipboard-container position-absolute right-0 top-0">
     <clipboard-copy aria-label="Copy" class="ClipboardButton btn js-clipboard-copy m-2 p-0 tooltipped-no-delay" data-copy-feedback="Copied!" data-tooltip-direction="w" value="npm install" tabindex="0" role="button">
       <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon m-2">
@@ -43,7 +42,7 @@
 </div>
 <div>
 <p>Start project</p>
-<div class="snippet-clipboard-content notranslate position-relative overflow-auto"><pre class="notranslate"><code>yarn start 
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto"><pre class="notranslate"><code>npm run dev 
 </code></pre><div class="zeroclipboard-container position-absolute right-0 top-0">
     <clipboard-copy aria-label="Copy" class="ClipboardButton btn js-clipboard-copy m-2 p-0 tooltipped-no-delay" data-copy-feedback="Copied!" data-tooltip-direction="w" value="npm install" tabindex="0" role="button">
       <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon m-2">
