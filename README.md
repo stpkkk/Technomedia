@@ -1,7 +1,5 @@
 <div stl></div>
-<h2>Deploy: 
- coming soon...
-</h2>
+
 
 <details>
 <summary>
