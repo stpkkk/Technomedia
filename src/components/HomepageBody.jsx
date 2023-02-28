@@ -6,7 +6,7 @@ import { StyledPage, Text } from "../styles/StyledPage.style";
 const HomepageBody = () => {
   const { closeCards } = useContext(AppContext);
   return (
-    <StyledPage margin="39.24px 20px" color="#272727" onClick={closeCards}>
+    <StyledPage margin="39.24px 20px" color="#e5e5e5" onClick={closeCards}>
       <Text
         maxWidth="1080px"
         paddingBottom="50px"

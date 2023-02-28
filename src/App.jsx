@@ -8,6 +8,8 @@ import { Route, Routes } from "react-router-dom";
 
 import Burger from "./components/Burger";
 import AppContext from "./context/context";
+// eslint-disable-next-line import/namespace
+import { data } from "./data.js";
 import Article from "./pages/Article";
 import Course from "./pages/Course";
 import Homepage from "./pages/Homepage";
@@ -18,6 +20,7 @@ import { GlobalStyles, Container } from "./styles/GlobalStyles.style";
 const App = () => {
   const [loading, setLoading] = useState(false);
   const [cardsData, setCardsData] = useState([]);
+
   const [hiddenCardsState, setHiddenCardsState] = useState([]);
 
   const closeCards = () => {
@@ -33,11 +36,11 @@ const App = () => {
     async function fetchData() {
       try {
         setLoading(true);
-        const res = await fetch("http://localhost:5000/cardsDataBase");
-        const jsonData = await res.json();
-        setCardsData(jsonData);
+        // const res = await fetch("http://localhost:5000/cardsDataBase");
+        // const jsonData = await res.json();
+        setCardsData(data.cardsDataBase);
         setHiddenCardsState(
-          jsonData.map((item) => {
+          data.cardsDataBase.map((item) => {
             return {
               id: item.id,
               hidden: true,

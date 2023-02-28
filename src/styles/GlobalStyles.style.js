@@ -30,8 +30,8 @@ html {
 
 body {
   margin: 0;
-  background-color:  #FFFFFF;
-  color:#272727;
+  background-color: #272727;
+  color: #e5e5e5;
   font-family: "Suisse Int'l Regular","Gill Sans",  sans-serif;
   font-style: normal;
   font-size: 16px;

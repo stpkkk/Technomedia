@@ -1,14 +1,15 @@
 <div stl></div>
-
+<h2>Deploy: 
+ https://stpk-technomedia.netlify.app
+</h2>
 
 <details>
 <summary>
 <h2>About</h2>
 </summary>
 <div>
- <p>Тестовое задание на должность Frontend-разработчика в компании Техномедия с использованием фреймворка React.js.
-Реализовано одностраничное веб-приложение с тремя карточками: статьи, курсы и медия, каждая карточка содержит сторисы, по нажатию на тайтл сториса открывается одноименная статья, курс или медия. Верстка pixel perfect.</p>
-<h2>Библиотеки которые использовались:</h2>
+ <p>Test assignment for the position of Frontend developer at Technomedia using the React.js framework. A single-page web application with three cards has been implemented: articles, courses and media, each card contains stories, by clicking on the title of the story, the article, course or media of the same name opens.</p>
+<h2>Libraries used:</h2>
 <p>Styled Components</p>
 <p>json-server</p>
 <p>react-h5-audio-player</p>
@@ -54,12 +55,11 @@
 </details>
 
 <div >
-<p>Структура приложения:</p>
+<p>Application structure:</p>
 <img src="https://github.com/stpkkk/Technomedia/blob/main/src/assets/img/app-structure.png" alt="test">
 </div>
  <div >
-<p>Превью:</p>
+<p>Preview:</p>
 <img src="https://github.com/stpkkk/Technomedia/blob/main/src/assets/img/app-preview.png" alt="test">
 </div>
 <div >
-
