@@ -8,7 +8,7 @@
 <h2>About</h2>
 </summary>
 <div>
- <p>Test assignment for the position of Frontend developer at Technomedia using the React.js framework. A single-page web application with three cards has been implemented: articles, courses and media, each card contains stories, by clicking on the title of the story, the article, course or media of the same name opens.</p>
+ <p>A single-page web application with three cards has been implemented: articles, courses and media, each card contains stories, by clicking on the title of the story, the article, course or media of the same name opens.</p>
 <h2>Libraries used:</h2>
 <p>Styled Components</p>
 <p>json-server</p>
